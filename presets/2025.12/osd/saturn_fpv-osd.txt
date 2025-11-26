@@ -1,0 +1,113 @@
+#$ TITLE: Saturn_FPV OSD
+#$ FIRMWARE_VERSION: 2025.12
+#$ CATEGORY: OSD
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: Saturn
+#$ AUTHOR: Saturn_FPV
+
+
+#$ DESCRIPTION: <br>
+#$ DESCRIPTION:
+#$ DESCRIPTION: ### Saturn_FPV OSD Preset
+#$ DESCRIPTION:
+#$ DESCRIPTION: <br>
+#$ DESCRIPTION:
+#$ DESCRIPTION: Choose from the options from the drop-down:
+#$ DESCRIPTION:
+#$ DESCRIPTION: <br>
+#$ DESCRIPTION:
+#$ DESCRIPTION: * Pick starter PIDs option
+#$ DESCRIPTION: * For optimisation and tips [use this custom PID calculator](https://supaflyfpv.com/betaflight-setup/)
+#$ DESCRIPTION: * RPM Filtering recommended on compatible ESC or de-select if not available
+#$ DESCRIPTION: * Pick your Radio Link or search in presets if not found
+#$ DESCRIPTION: * Try some freestyle rates modeled on the 3 main styles...
+#$ DESCRIPTION: 
+#$ DESCRIPTION: <br>
+
+## OSD
+
+#$ OPTION_GROUP BEGIN:Bitmask
+
+	#$ OPTION BEGIN (CHECKED): with GPS
+
+	## with gps
+	set osd_warn_bitmask = 56317
+	set osd_stat_bitmask = 8785596
+
+	#$ OPTION END
+
+	#$ OPTION BEGIN (UNCHECKED): without GPS GPS
+
+	## no gps
+	set osd_warn_bitmask = 50173
+	set osd_stat_bitmask = 8521380
+
+	#$ OPTION END
+
+#$ OPTION_GROUP END
+
+	## OSD Alarms
+	set osd_link_quality_alarm = 60
+
+#$ OPTION_GROUP BEGIN:RSSI dBm Warning
+
+	#$ OPTION BEGIN (CHECKED): 250Hz
+
+	set osd_rssi_dbm_alarm = -98
+
+	#$ OPTION END
+
+	#$ OPTION BEGIN (UNCHECKED): 50Hz
+
+	set osd_rssi_dbm_alarm = -105
+
+	#$ OPTION END
+
+#$ OPTION_GROUP END
+
+	set osd_cap_alarm = 9999
+	set osd_alt_alarm = 9999
+	set osd_tim1 = 0
+	set osd_tim2 = 1
+
+	## OSD position
+	set osd_vbat_pos = 301
+	set osd_rssi_pos = 152
+	set osd_link_quality_pos = 14359
+	set osd_link_tx_power_pos = 13320
+	set osd_rssi_dbm_pos = 15361
+	set osd_tim_2_pos = 15855
+	set osd_flymode_pos = 14944
+	set osd_throttle_pos = 15377
+	set osd_vtx_channel_pos = 373
+	set osd_crosshairs_pos = 349
+	set osd_ah_sbar_pos = 8506
+	set osd_ah_pos = 8410
+	set osd_current_pos = 15438
+	set osd_mah_drawn_pos = 14973
+	set osd_motor_diag_pos = 8760
+	set osd_craft_name_pos = 384
+	set osd_gps_speed_pos = 12480
+	set osd_gps_lon_pos = 12320
+	set osd_gps_lat_pos = 12288
+	set osd_gps_sats_pos = 12352
+	set osd_home_dir_pos = 12544
+	set osd_home_dist_pos = 12576
+	set osd_flight_dist_pos = 12640
+	set osd_compass_bar_pos = 8310
+	set osd_altitude_pos = 28800
+	set osd_power_pos = 388
+	set osd_pidrate_profile_pos = 14912
+	set osd_warnings_pos = 14838
+	set osd_avg_cell_voltage_pos = 14965
+	set osd_disarmed_pos = 14519
+	set osd_esc_tmp_pos = 8640
+	set osd_esc_rpm_pos = 9481
+	set osd_esc_rpm_freq_pos = 9488
+	set osd_flip_arrow_pos = 14490
+	set osd_core_temp_pos = 8608
+	set osd_log_status_pos = 9650
+	set osd_rate_profile_name_pos = 544
+	set osd_pid_profile_name_pos = 544
+	set osd_efficiency_pos = 12903
+	set osd_sys_vtx_temp_pos = 480
