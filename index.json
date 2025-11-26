@@ -800,24 +800,6 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/2025.12/rates/FaderFPV.txt",
-      "hash": "e43804fccbe119b8df8f549b7aed1304edd60b24049ef3eea7e5b1c12796294a",
-      "title": "Nicholas Young Rates",
-      "firmware_version": [
-        "2025.12"
-      ],
-      "category": "RATES",
-      "status": "COMMUNITY",
-      "keywords": [
-        "fader fpv",
-        "secretfader",
-        "nicholas young",
-        "fictive flame"
-      ],
-      "author": "Nicholas Young (Fader FPV)",
-      "priority": 10000
-    },
-    {
       "fullPath": "presets/2025.12/tune/defaults.txt",
       "hash": "8ae71425a27ac35d53b57e962d0e81ff22a6515b9ee2b94fe45c771492010eee",
       "title": "Betaflight 2025.12 TUNE defaults",
