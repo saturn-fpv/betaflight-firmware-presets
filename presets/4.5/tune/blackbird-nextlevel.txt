@@ -9,6 +9,16 @@
 	#$ PARSER: MARKED
 	#$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/nn
 #	#$ FORCE_OPTIONS_REVIEW
+
+# -- To Do --
+	# Either seperate 4.5 and 2025.12 OR together and warn of errors (check 4.5 defaults, check 2025.12 rc link defaults, include 2025.12 tune and filter defaults.)
+	# 
+	# Try on a 4.5 quad and on a 2025.12 quad
+	# 
+	# Test resetting and then diff all
+	# 
+	# 
+	# 
 	
 
 # -- Description --
@@ -16,9 +26,7 @@
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: <img src="https://img.youtube.com/vi/B6UteJvRtjU/maxresdefault.jpg" width="350px"/> <br>
 	#$ DESCRIPTION: <br>
-	#$ DESCRIPTION: - [BB NEXT LEVEL YouTube Video](https://youtu.be/B6UteJvRtjU) <br>
 	#$ DESCRIPTION: - YouTube Video: [BB NEXT LEVEL](https://youtu.be/B6UteJvRtjU) <br>
-	#$ DESCRIPTION: [BB NEXT LEVEL YouTube Video](https://youtu.be/B6UteJvRtjU)
 	#$ DESCRIPTION: <br>
 	#$ DESCRIPTION: Description:
 	#$ DESCRIPTION: -----------
@@ -26,9 +34,9 @@
 	#$ DESCRIPTION: <br>
 	#$ DESCRIPTION: All selectable options are derived directly from the video. At the bottom, you will find a checkbox to revert all parameters changed by this preset. <br>
 	#$ DESCRIPTION: <br>
-	#$ DESCRIPTION: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication!
+	#$ DESCRIPTION: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! <br>
 	#$ DESCRIPTION: <br>
-	#$ DESCRIPTION: **WARNING:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
+	#$ DESCRIPTION: **WARNING:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly. <br>
 	#$ DESCRIPTION: <br>
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
