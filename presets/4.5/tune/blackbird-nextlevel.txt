@@ -1,6 +1,7 @@
 # -- Header --
 	#$ TITLE: Black Bird FPV | Next Level
 	#$ FIRMWARE_VERSION: 4.5
+	#$ FIRMWARE_VERSION: 2025.12
 	#$ CATEGORY: TUNE
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Black Bird FPV, Blackbird, Next Level, SBANG, 6S, Freestyle, 5 inch, 5"
@@ -15,7 +16,7 @@
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Description:
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: This preset is based on Damien Gans' (aka Black Bird FPV) Next Level Preset Video linked above. It is meant for a 5 inch, high kv quad and "overtunes" the quad to benefit juicy sbang style flying (High P, high I, low D). All options you can select are derived from the video and at the end you'll find a checkbox to reset everything that has been changed by this tune.
+	#$ DESCRIPTION: This preset is based on Damien Gans' (aka Black Bird FPV) Next Level Preset Video linked above. It is meant for a 5 inch, high quality, high kv quad and "overtunes" the quad to benefit juicy sbang style flying (High P, high I, low D). All options you can select are derived from the video and at the end you'll find a checkbox to reset everything that has been changed by this tune.
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
@@ -36,6 +37,8 @@
 	#$ DESCRIPTION: Deadband: If using high rates (fast movement even with low stick deflection) then a higher deadband is necessary for sharp stops of movements.
 	#$ DESCRIPTION: Propeller: 5.1 inch propeller need a lower motor idle % compared to 4.9 inch.
 
+# -- Warning --
+	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication
 
 # -- Includes --
 	#$ INCLUDE: presets/4.5/tune/defaults.txt
