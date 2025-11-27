@@ -9,39 +9,42 @@
 	#$ PARSER: MARKED
 
 # -- Description --
-	#$ DESCRIPTION: Black Bird FPV Next Level Preset
+	#$ DESCRIPTION: Black Bird FPV - Next Level Preset
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: <img src="https://img.youtube.com/vi/B6UteJvRtjU/maxresdefault.jpg" width="350px"/>
-	#$ DESCRIPTION: 
 	#$ DESCRIPTION: - YouTube Video: [BB NEXT LEVEL](https://youtu.be/B6UteJvRtjU)
-	#$ DESCRIPTION: 
+
 	#$ DESCRIPTION: Description:
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: This preset is based on Damien Gans' (aka Black Bird FPV) Next Level Preset Video linked above. It is meant for a 5 inch, high quality, high kv quad and "overtunes" the quad to benefit juicy sbang style flying (High P, high I, low D). All options you can select are derived from the video and at the end you'll find a checkbox to reset everything that has been changed by this tune. This is a very specific tune that can lead to burnt motors and flyaways. Test carefully.
-	#$ DESCRIPTION: 
+	#$ DESCRIPTION: This preset is based on Damien Gans’ (Black Bird FPV) **Next Level** tuning guide. It is designed for high-quality, high-KV 5-inch quads and intentionally “overtunes” the rig to enhance juicy/sbang-style flying (high P, high I, low D).
+	#$ DESCRIPTION:<br>
+	#$ DESCRIPTION: All selectable options are derived directly from the video. At the bottom, you will find a checkbox to revert all parameters changed by this preset.
+	#$ DESCRIPTION:<br>
+	#$ DESCRIPTION: **Warning:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
+
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: Motor Timing: 24 deg <br>
 	#$ DESCRIPTION: Demag Compensation: Low <br>
 	#$ DESCRIPTION: PWM Frequency: 48 kHz 
-	#$ DESCRIPTION: 
+
 	#$ DESCRIPTION: Other Recommendations
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: Use FalcoX or Rush Gummies for the stack instead of nuts, if you are using the more sensitive ICM gyro.
-	#$ DESCRIPTION: 
-	#$ DESCRIPTION: Options Explanation
+	#$ DESCRIPTION: For stacks with more sensitive ICM gyros, consider using **FalcoX** or **Rush** gummies instead of metal nuts for softer mounting.
+
+	#$ DESCRIPTION: Option Explanation
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: - Flying Altitude (ASL): Black Bird FPV lives at 1000m above sea level and can push the PIDs a bit higher. He recommends lower PIDs for sea level. You can choose in the dropdown menu. (Lower P and D by 3)
-	#$ DESCRIPTION: - Action Camera: Black Bird FPV flies with an action cam and therefor uses higher PIDs. If you don't use an action camera choose that setting for lower pids. (Lower P and D by 5)
-	#$ DESCRIPTION: - Gyro: ICM is more sensitive than MPU6000, so filtering is stronger. The MPU6000 has more internal filtering. The "Low Quality Quad" option sets a dynamic PT1 filter instead of the static filter. Find out in the setup tab or with cli command "system".
-	#$ DESCRIPTION: - Radio Link: The Betaflight developers recommend the radio link presets, but Black Bird FPV suggests generally low smoothing.
-	#$ DESCRIPTION: - Deadband: If using high rates (fast movement even with low stick deflection) then a higher deadband is necessary for sharp stops of movements.
-	#$ DESCRIPTION: - Propeller: 5.1 inch propeller need a lower motor idle % compared to 4.9 inch.
+	#$ DESCRIPTION: - **Flying Altitude (ASL):** Black Bird FPV tunes at ~1000 m above sea level and runs slightly higher PIDs there. For sea-level flying, choose the lower-altitude option (reduces P and D by 3).
+	#$ DESCRIPTION: - **Action Camera:** Flying with an action cam adds weight and allows higher PIDs. If you fly without an action cam, select the “no action cam” option (reduces P and D by 5).
+	#$ DESCRIPTION: - **Gyro:** *ICM gyros* are more sensitive and require stronger filtering. *MPU6000* has more internal filtering and can run lighter external filters. “Low Quality Quad” applies a dynamic PT1 filter instead of a static one. Check your gyro type in the Setup Tab or by running `status` in CLI.
+	#$ DESCRIPTION: - **Radio Link:** Betaflight developers generally recommend their radio-link presets, but Black Bird FPV prefers minimal smoothing for stick feel.
+	#$ DESCRIPTION: - **Deadband:** High center-stick rates can require increased deadband for clean and sharp movement stops.
+	#$ DESCRIPTION: - **Propeller Size:** 5.1" props typically require a lower motor-idle percentage than 4.9" props.
 	#$ DESCRIPTION: <br>
 	#$ DESCRIPTION: <br>
 
 # -- Warning --
-	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! This is a very specific tune that can lead to burnt motors and flyaways. Test carefully!
+	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! **Warning:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
 
 # -- Includes --
 	#$ INCLUDE: presets/4.5/tune/defaults.txt
