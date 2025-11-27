@@ -5,7 +5,7 @@
 	#$ CATEGORY: TUNE
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Black Bird FPV, Blackbird, Next Level, SBANG, 6S, Freestyle, 5 inch, 5"
-	#$ AUTHOR: Black Bird FPV (Tune) / Saturn_FPV (preset)
+	#$ AUTHOR: Black Bird FPV (Tune) / Saturn_FPV (Preset)
 	#$ PARSER: MARKED
 	#$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/nn
 #	#$ FORCE_OPTIONS_REVIEW
@@ -15,7 +15,7 @@
 	# Check upcoming 2025.12 rc link defaults
 	# Try on a 4.5 quad and on a 2025.12 quad
 	# Test resetting and then diff all
-	# Wait for 2025.12 defaults idle bug being fixed
+	# Wait for 2025.12 defaults idle bug being fixed (issue #528)
 
 # -- Description --
 	#$ DESCRIPTION: Black Bird FPV - Next Level Preset
@@ -225,17 +225,21 @@
 			set feedforward_boost = 20
 			set feedforward_max_rate_limit = 95
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 50Hz
-			#$ INCLUDE: presets/4.3/rc_link/elrs_50hz.txt
+		#$ OPTION BEGIN (UNCHECKED): Official 50Hz HD Freestyle
+			#$ INCLUDE: presets/4.3/rc_link/generic/50hz_hd_freestyle.txt
+#			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_hd_freestyle.txt
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 150Hz
-			#$ INCLUDE: presets/4.3/rc_link/elrs_150hz.txt
+		#$ OPTION BEGIN (UNCHECKED): Official 150Hz HD Freestyle
+			#$ INCLUDE: presets/4.3/rc_link/generic/150hz_hd_freestyle.txt
+#			#$ INCLUDE: presets/2025.12/rc_link/generic/150hz_hd_freestyle.txt
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 250Hz
-			#$ INCLUDE: presets/4.3/rc_link/elrs_250hz.txt
+		#$ OPTION BEGIN (UNCHECKED): Official 250Hz HD Freestyle
+			#$ INCLUDE: presets/4.3/rc_link/generic/250hz_hd_freestyle.txt
+#			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_hd_freestyle.txt
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 500Hz
-			#$ INCLUDE: presets/4.3/rc_link/elrs_500hz.txt
+		#$ OPTION BEGIN (UNCHECKED): Official 500Hz HD Freestyle
+			#$ INCLUDE: presets/4.3/rc_link/generic/500hz_hd_freestyle.txt
+#			#$ INCLUDE: presets/2025.12/rc_link/generic/500hz_hd_freestyle.txt
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
