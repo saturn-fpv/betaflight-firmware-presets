@@ -13,7 +13,7 @@
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: <img src="https://img.youtube.com/vi/B6UteJvRtjU/maxresdefault.jpg" width="350px"/>
 	#$ DESCRIPTION: - YouTube Video: [BB NEXT LEVEL](https://youtu.be/B6UteJvRtjU)
-
+	#$ DESCRIPTION:
 	#$ DESCRIPTION: Description:
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: This preset is based on Damien Gans’ (Black Bird FPV) **Next Level** tuning guide. It is designed for high-quality, high-KV 5-inch quads and intentionally “overtunes” the rig to enhance juicy/sbang-style flying (high P, high I, low D).
@@ -21,17 +21,17 @@
 	#$ DESCRIPTION: All selectable options are derived directly from the video. At the bottom, you will find a checkbox to revert all parameters changed by this preset.
 	#$ DESCRIPTION:<br>
 	#$ DESCRIPTION: **Warning:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
-
+	#$ DESCRIPTION:
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: Motor Timing: 24 deg <br>
 	#$ DESCRIPTION: Demag Compensation: Low <br>
 	#$ DESCRIPTION: PWM Frequency: 48 kHz 
-
+	#$ DESCRIPTION:
 	#$ DESCRIPTION: Other Recommendations
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: For stacks with more sensitive ICM gyros, consider using **FalcoX** or **Rush** gummies instead of metal nuts for softer mounting.
-
+	#$ DESCRIPTION:
 	#$ DESCRIPTION: Option Explanation
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: - **Flying Altitude (ASL):** Black Bird FPV tunes at ~1000 m above sea level and runs slightly higher PIDs there. For sea-level flying, choose the lower-altitude option (reduces P and D by 3).
@@ -44,7 +44,7 @@
 	#$ DESCRIPTION: <br>
 
 # -- Warning --
-	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! **Warning:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
+	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! **WARNING:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
 
 # -- Includes --
 	#$ INCLUDE: presets/4.5/tune/defaults.txt
