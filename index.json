@@ -163,7 +163,7 @@
       "benlumley",
       "bensonk",
       "Betaflight",
-      "Black Bird FPV",
+      "Black Bird FPV (Tune) / Saturn_FPV (preset)",
       "BMSThomas",
       "Botgrinder",
       "Chris Rosser",
@@ -7532,7 +7532,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/blackbird-nextlevel.txt",
-      "hash": "0d8f33296284c9802f37ecab2672a497785291ee62502619dced7494e773cc2a",
+      "hash": "bbbe1f9664ab7384b147dcc1e8a68d8c844806e0cd1504a48646f02504ced46b",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
         "2025.12"
@@ -7549,7 +7549,7 @@
         "5 inch",
         "5\""
       ],
-      "author": "Black Bird FPV",
+      "author": "Black Bird FPV (Tune) / Saturn_FPV (preset)",
       "priority": 1000000000000
     },
     {
