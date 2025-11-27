@@ -4,7 +4,7 @@
 	#$ CATEGORY: TUNE
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Black Bird FPV, Blackbird, Next Level, SBANG, 6S, Freestyle, 5 inch, 5"
-	#$ AUTHOR: Saturn_FPV
+	#$ AUTHOR: Black Bird FPV
 
 # -- Description --
 	#$ DESCRIPTION: Black Bird FPV Next Level Preset
@@ -29,9 +29,10 @@
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Option Explanation
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: Flying Altitude (ASL): Black Bird FPV lives at 1000m above sea level and can push the PIDs a bit higher. He recommends lower PIDs for sea level. You can choose in the dropdown menu.
+	#$ DESCRIPTION: Flying Altitude (ASL): Black Bird FPV lives at 1000m above sea level and can push the PIDs a bit higher. He recommends lower PIDs for sea level. You can choose in the dropdown menu. (Lower P and D by 3)
+	#$ DESCRIPTION: Action Camera: Black Bird FPV flies with an action cam and therefor uses higher PIDs. If you don't use an action camera choose that setting for lower pids. (Lower P and D by 5)
 	#$ DESCRIPTION: Gyro: ICM is more sensitive than MPU6000, so filtering is stronger. The MPU6000 has more internal filtering. The "Low Quality Quad" option sets a dynamic PT1 filter instead of the static filter. Find out in the setup tab or with cli command "system".
-	#$ DESCRIPTION: Radio Link: The Betaflight developer recommend the radio link presets, but Black Bird FPV suggests generally low jitter values. Only for 500Hz he suggests higher smoothing.
+	#$ DESCRIPTION: Radio Link: The Betaflight developers recommend the radio link presets, but Black Bird FPV suggests generally low smoothing.
 	#$ DESCRIPTION: Deadband: If using high rates (fast movement even with low stick deflection) then a higher deadband is necessary for sharp stops of movements.
 	#$ DESCRIPTION: Propeller: 5.1 inch propeller need a lower motor idle % compared to 4.9 inch.
 
@@ -66,6 +67,8 @@
 
 # -- Filtering --
 	set gyro_lpf1_static_hz = 300
+	set gyro_lpf1_dyn_min_hz = 0
+	set gyro_lpf1_dyn_max_hz = 0
 	set gyro_lpf2_static_hz = 0
 	set dyn_notch_count = 1
 	set dyn_notch_q = 500
@@ -83,7 +86,11 @@
 	set yaw_lowpass_hz = 0
 	
 # -- RC Link --
+	set rc_smoothing = ON
+	set rc_smoothing_setpoint_cutoff = 0
+	set rc_smoothing_throttle_cutoff = 0
 	set rc_smoothing_auto_factor = 5
+	set rc_smoothing_auto_factor_throttle = 30
 	set deadband = 3
 	set yaw_deadband = 4
 	
@@ -100,12 +107,56 @@
 # -- Options --
 	#$ OPTION_GROUP BEGIN: Action Cam and Flying Altitude (ASL)
 		#$ OPTION BEGIN (CHECKED): 1000m with Action Cam
+			set p_pitch = 70
+			set i_pitch = 120
+			set d_pitch = 40
+			set p_roll = 66
+			set i_roll = 120
+			set d_roll = 37
+			set p_yaw = 83
+			set i_yaw = 120
+			set d_max_roll = 37
+			set d_max_pitch = 40
+			set d_max_advance = 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Sea Level with Action Cam
+			set p_pitch = 67
+			set i_pitch = 117
+			set d_pitch = 37
+			set p_roll = 63
+			set i_roll = 117
+			set d_roll = 34
+			set p_yaw = 83
+			set i_yaw = 120
+			set d_max_roll = 34
+			set d_max_pitch = 37
+			set d_max_advance = 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): 1000m no Action Cam
+			set p_pitch = 65
+			set i_pitch = 115
+			set d_pitch = 35
+			set p_roll = 61
+			set i_roll = 115
+			set d_roll = 32
+			set p_yaw = 83
+			set i_yaw = 120
+			set d_max_roll = 32
+			set d_max_pitch = 35
+			set d_max_advance = 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Sea Level no Action Cam
+			set p_pitch = 72
+			set i_pitch = 112
+			set d_pitch = 32
+			set p_roll = 58
+			set i_roll = 112
+			set d_roll = 29
+			set p_yaw = 83
+			set i_yaw = 120
+			set d_max_roll = 29
+			set d_max_pitch = 32
+			set d_max_advance = 0
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
@@ -129,26 +180,99 @@
 
 	#$ OPTION_GROUP BEGIN: Propeller
 		#$ OPTION BEGIN (CHECKED): 4.9 inch
+			set motor_idle = 540
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): 5.1 inch
+			set motor_idle = 530
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
 	#$ OPTION_GROUP BEGIN: Radio Link
 		#$ OPTION BEGIN (CHECKED): BB Preset
+			set rc_smoothing_auto_factor = 5
+			set rc_smoothing_auto_factor_throttle = 30
+			set feedforward_averaging = OFF
+			set feedforward_smooth_factor = 40
+			set feedforward_jitter_factor = 9
+			set feedforward_boost = 20
+			set feedforward_max_rate_limit = 95
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): BB 500
+		#$ OPTION BEGIN (UNCHECKED): Official 50Hz
+			#$ INCLUDE: presets/4.3/rc_link/elrs_50hz.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 150Hz
+			#$ INCLUDE: presets/4.3/rc_link/elrs_150hz.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 250Hz
+			#$ INCLUDE: presets/4.3/rc_link/elrs_250hz.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 500Hz
+			#$ INCLUDE: presets/4.3/rc_link/elrs_500hz.txt
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
 	#$ OPTION_GROUP BEGIN: Deadband
-		#$ OPTION BEGIN (CHECKED): for high rates
+		#$ OPTION BEGIN (CHECKED): For high Center Rates
+			set deadband = 3
+			set yaw_deadband = 4
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): for low to medium rates
+		#$ OPTION BEGIN (UNCHECKED): For low to medium Center Rates
+			set deadband = 0
+			set yaw_deadband = 0
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
 	#$ OPTION_GROUP BEGIN: Defaults
 		#$ OPTION BEGIN (UNCHECKED): Resets all BB settings
+			set p_pitch = 47
+			set i_pitch = 84
+			set d_pitch = 34
+			set p_roll = 45
+			set i_roll = 80
+			set d_roll = 30
+			set p_yaw = 45
+			set i_yaw = 80
+			set d_max_roll = 40
+			set d_max_pitch = 46
+			set d_max_advance = 20
+			set iterm_relax_cutoff = 15
+			set throttle_boost = 5
+			set thrust_linear = 0
+			set feedforward_averaging = 2_POINT
+			set feedforward_smooth_factor = 65
+			set feedforward_jitter_factor = 7
+			set feedforward_boost = 15
+			set feedforward_max_rate_limit = 90
+			set simplified_pids_mode = RPY
+			set tpa_mode = D
+			set tpa_breakpoint = 1350
+			set gyro_lpf1_static_hz = 250
+			set gyro_lpf1_dyn_min_hz = 250
+			set gyro_lpf1_dyn_max_hz = 500
+			set gyro_lpf2_static_hz = 500
+			set dyn_notch_count = 3
+			set dyn_notch_q = 300
+			set dyn_notch_min_hz = 100
+			set simplified_gyro_filter = ON
+			set simplified_dterm_filter = ON
+			set rpm_filter_harmonics = 3
+			set dterm_lpf1_dyn_min_hz = 75
+			set dterm_lpf1_dyn_max_hz = 150
+			set dterm_lpf1_type = PT1
+			set dterm_lpf2_type = PT1
+			set dterm_lpf2_static_hz = 150
+			set yaw_lowpass_hz = 100
+			set rc_smoothing = ON
+			set rc_smoothing_setpoint_cutoff = 0
+			set rc_smoothing_throttle_cutoff = 0
+			set rc_smoothing_auto_factor = 30
+			set rc_smoothing_auto_factor_throttle = 30
+			set deadband = 0
+			set yaw_deadband = 0
+			set motor_idle = 550
+			set dshot_bidir = OFF
+			set motor_pwm_protocol = DSHOT600
+			set pidsum_limit = 500
+			set pidsum_limit_yaw = 400
 		#$ OPTION END
 	#$ OPTION_GROUP END

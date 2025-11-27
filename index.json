@@ -163,6 +163,7 @@
       "benlumley",
       "bensonk",
       "Betaflight",
+      "Black Bird FPV",
       "BMSThomas",
       "Botgrinder",
       "Chris Rosser",
@@ -197,7 +198,6 @@
       "Nicholas Young (Fader FPV)",
       "QuadMcFly (Ryan Harrell)",
       "Sartor",
-      "Saturn_FPV",
       "Sjoer van der Ploeg",
       "Stingers Swarm",
       "Sugar K",
@@ -7532,7 +7532,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/blackbird-nextlevel.txt",
-      "hash": "ac6711e03bdc3cb8aac3565d766a4d3f9855b2debed8e109cffef78e59f3c260",
+      "hash": "7bda70026a540253f9e403bb4fb9787a2252292266674c4b897e9a2fcedf5f23",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
         "4.5"
@@ -7549,7 +7549,7 @@
         "5 inch",
         "5\""
       ],
-      "author": "Saturn_FPV",
+      "author": "Black Bird FPV",
       "priority": 1000000000000
     },
     {
