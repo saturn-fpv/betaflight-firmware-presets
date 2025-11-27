@@ -7532,10 +7532,9 @@
     },
     {
       "fullPath": "presets/4.5/tune/blackbird-nextlevel.txt",
-      "hash": "debeec11ddf39c22f4dbfd1959d318ec51dba4f69d655555402a8f1870d2decc",
+      "hash": "0d8f33296284c9802f37ecab2672a497785291ee62502619dced7494e773cc2a",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
-        "4.5",
         "2025.12"
       ],
       "category": "TUNE",
