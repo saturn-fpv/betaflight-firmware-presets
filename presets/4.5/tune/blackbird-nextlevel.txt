@@ -1,0 +1,154 @@
+# -- Header --
+	#$ TITLE: Black Bird FPV | Next Level
+	#$ FIRMWARE_VERSION: 4.5
+	#$ CATEGORY: TUNE
+	#$ STATUS: EXPERIMENTAL
+	#$ KEYWORDS: Black Bird FPV, Blackbird, Next Level, SBANG, 6S, Freestyle, 5 inch, 5"
+	#$ AUTHOR: Saturn_FPV
+
+# -- Description --
+	#$ DESCRIPTION: Black Bird FPV Next Level Preset
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: <img src="https://img.youtube.com/vi/B6UteJvRtjU/maxresdefault.jpg" width="350px"/>
+	#$ DESCRIPTION: 
+	#$ DESCRIPTION: [BB NEXT LEVEL YouTube Video](https://youtu.be/B6UteJvRtjU)
+	#$ DESCRIPTION: 
+	#$ DESCRIPTION: Description:
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: This preset is based on Damien Gans' (aka Black Bird FPV) Next Level Preset Video linked above. It is meant for a 5 inch, high kv quad and "overtunes" the quad to benefit juicy sbang style flying (High P, high I, low D). All options you can select are derived from the video and at the end you'll find a checkbox to reset everything that has been changed by this tune.
+	#$ DESCRIPTION: 
+	#$ DESCRIPTION: Recommended ESC Settings
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: Motor Timing: 24 deg
+	#$ DESCRIPTION: Demag Compensation: Low
+	#$ DESCRIPTION: PWM Frequency: 48 kHz
+	#$ DESCRIPTION: 
+	#$ DESCRIPTION: Other Recommendations
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: Use FalcoX or Rush Gummies for the stack instead of nuts, if you are using the more sensitive ICM gyro.
+	#$ DESCRIPTION: 
+	#$ DESCRIPTION: Option Explanation
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: Flying Altitude (ASL): Black Bird FPV lives at 1000m above sea level and can push the PIDs a bit higher. He recommends lower PIDs for sea level. You can choose in the dropdown menu.
+	#$ DESCRIPTION: Gyro: ICM is more sensitive than MPU6000, so filtering is stronger. The MPU6000 has more internal filtering. The "Low Quality Quad" option sets a dynamic PT1 filter instead of the static filter. Find out in the setup tab or with cli command "system".
+	#$ DESCRIPTION: Radio Link: The Betaflight developer recommend the radio link presets, but Black Bird FPV suggests generally low jitter values. Only for 500Hz he suggests higher smoothing.
+	#$ DESCRIPTION: Deadband: If using high rates (fast movement even with low stick deflection) then a higher deadband is necessary for sharp stops of movements.
+	#$ DESCRIPTION: Propeller: 5.1 inch propeller need a lower motor idle % compared to 4.9 inch.
+
+
+# -- Includes --
+	#$ INCLUDE: presets/4.5/tune/defaults.txt
+	#$ INCLUDE: presets/4.5/filters/defaults.txt
+
+# -- PID Tune --
+	set p_pitch = 70
+	set i_pitch = 120
+	set d_pitch = 40
+	set p_roll = 66
+	set i_roll = 120
+	set d_roll = 37
+	set p_yaw = 83
+	set i_yaw = 120
+	set d_max_roll = 37
+	set d_max_pitch = 40
+	set d_max_advance = 0
+	set iterm_relax_cutoff = 20
+	set throttle_boost = 4
+	set thrust_linear = 1
+	set feedforward_averaging = OFF
+	set feedforward_smooth_factor = 40
+	set feedforward_jitter_factor = 9
+	set feedforward_boost = 20
+	set feedforward_max_rate_limit = 95
+	set simplified_pids_mode = OFF
+	set tpa_mode = PD
+	set tpa_breakpoint = 1650
+
+# -- Filtering --
+	set gyro_lpf1_static_hz = 300
+	set gyro_lpf2_static_hz = 0
+	set dyn_notch_count = 1
+	set dyn_notch_q = 500
+	set dyn_notch_min_hz = 150
+	set gyro_lpf1_dyn_min_hz = 0
+	set gyro_lpf1_dyn_max_hz = 0
+	set simplified_gyro_filter = OFF
+	set simplified_dterm_filter = OFF
+	set rpm_filter_harmonics = 2
+	set dterm_lpf1_dyn_min_hz = 127
+	set dterm_lpf1_dyn_max_hz = 257
+	set dterm_lpf1_type = BIQUAD
+	set dterm_lpf2_type = BIQUAD
+	set dterm_lpf2_static_hz = 257
+	set yaw_lowpass_hz = 0
+	
+# -- RC Link --
+	set rc_smoothing_auto_factor = 5
+	set deadband = 3
+	set yaw_deadband = 4
+	
+# -- Motor Settings --
+	set motor_idle = 540
+	set dshot_bidir = ON
+	set motor_pwm_protocol = DSHOT600
+
+
+# -- CLI Options --
+	set pidsum_limit = 1000
+	set pidsum_limit_yaw = 900
+
+# -- Options --
+	#$ OPTION_GROUP BEGIN: Action Cam and Flying Altitude (ASL)
+		#$ OPTION BEGIN (CHECKED): 1000m with Action Cam
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Sea Level with Action Cam
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): 1000m no Action Cam
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Sea Level no Action Cam
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: Gyro
+		#$ OPTION BEGIN (CHECKED): ICM42688
+			set gyro_lpf1_static_hz = 300
+			set gyro_lpf1_dyn_min_hz = 0
+			set gyro_lpf1_dyn_max_hz = 0
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): MPU6000
+			set gyro_lpf1_static_hz = 500
+			set gyro_lpf1_dyn_min_hz = 0
+			set gyro_lpf1_dyn_max_hz = 0
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Low Quality Quad
+			set gyro_lpf1_static_hz = 0
+			set gyro_lpf1_dyn_min_hz = 250
+			set gyro_lpf1_dyn_max_hz = 500
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: Propeller
+		#$ OPTION BEGIN (CHECKED): 4.9 inch
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): 5.1 inch
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: Radio Link
+		#$ OPTION BEGIN (CHECKED): BB Preset
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): BB 500
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: Deadband
+		#$ OPTION BEGIN (CHECKED): for high rates
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): for low to medium rates
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: Defaults
+		#$ OPTION BEGIN (UNCHECKED): Resets all BB settings
+		#$ OPTION END
+	#$ OPTION_GROUP END
