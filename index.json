@@ -257,7 +257,7 @@
       "4S",
       "5",
       "5 In",
-      "5 Inch",
+      "5 inch",
       "5.5",
       "5\"",
       "500Hz",
@@ -392,7 +392,7 @@
       "freedom",
       "freedom spec",
       "FreedomSpec",
-      "freestyle",
+      "Freestyle",
       "freesytle",
       "freetyle",
       "FreshBread",
@@ -529,7 +529,7 @@
       "sa2.0",
       "sa20",
       "Safe",
-      "sbang",
+      "SBANG",
       "sbus",
       "SBUS fast",
       "secretfader",
@@ -820,6 +820,28 @@
       ],
       "author": "Nicholas Young (Fader FPV)",
       "priority": 10000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/blackbird_nextlevel.txt",
+      "hash": "eb5d0ebb8b81ad2a74f9c3e9907a0e2d615520f5ad2890f1705b5a180179865f",
+      "title": "Black Bird FPV | Next Level",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "Black Bird FPV",
+        "Blackbird",
+        "Next Level",
+        "SBANG",
+        "6S",
+        "Freestyle",
+        "5 inch",
+        "5\""
+      ],
+      "author": "Black Bird FPV (Tune) / Saturn_FPV (Preset)",
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/2025.12/tune/defaults.txt",
@@ -7531,11 +7553,11 @@
       "priority": 1000000000000
     },
     {
-      "fullPath": "presets/4.5/tune/blackbird-nextlevel.txt",
-      "hash": "32661f4ea26dc4538c73b74a19b2e17d0c60bac224258019983a2063090bcebf",
+      "fullPath": "presets/4.5/tune/blackbird_nextlevel.txt",
+      "hash": "dc16f91828a234a8b426139e7a15bff7763861de4e7a8c11096716d28d7135a8",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
-        "2025.12"
+        "4.5"
       ],
       "category": "TUNE",
       "status": "EXPERIMENTAL",
