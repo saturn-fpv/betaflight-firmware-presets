@@ -6,17 +6,18 @@
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Black Bird FPV, Blackbird, Next Level, SBANG, 6S, Freestyle, 5 inch, 5"
 	#$ AUTHOR: Black Bird FPV
+	#$ PARSER: MARKED
 
 # -- Description --
-	#$ DESCRIPTION: ## Black Bird FPV Next Level Preset
+	#$ DESCRIPTION: >>> Black Bird FPV Next Level Preset <<<
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: <img src="https://img.youtube.com/vi/B6UteJvRtjU/maxresdefault.jpg" width="350px"/>
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: [BB NEXT LEVEL YouTube Video](https://youtu.be/B6UteJvRtjU)
 	#$ DESCRIPTION: 
-	#$ DESCRIPTION: ### Description:
+	#$ DESCRIPTION: Description:
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: This preset is based on Damien Gans' (aka Black Bird FPV) Next Level Preset Video linked above. It is meant for a 5 inch, high quality, high kv quad and "overtunes" the quad to benefit juicy sbang style flying (High P, high I, low D). All options you can select are derived from the video and at the end you'll find a checkbox to reset everything that has been changed by this tune.
+	#$ DESCRIPTION: This preset is based on Damien Gans' (aka Black Bird FPV) Next Level Preset Video linked above. It is meant for a 5 inch, high quality, high kv quad and "overtunes" the quad to benefit juicy sbang style flying (High P, high I, low D). All options you can select are derived from the video and at the end you'll find a checkbox to reset everything that has been changed by this tune. This is a very specific tune that can lead to burnt motors and flyaways. Test carefully.
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
@@ -28,7 +29,7 @@
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: Use FalcoX or Rush Gummies for the stack instead of nuts, if you are using the more sensitive ICM gyro.
 	#$ DESCRIPTION: 
-	#$ DESCRIPTION: Option Explanation
+	#$ DESCRIPTION: Options Explanation
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: - Flying Altitude (ASL): Black Bird FPV lives at 1000m above sea level and can push the PIDs a bit higher. He recommends lower PIDs for sea level. You can choose in the dropdown menu. (Lower P and D by 3)
 	#$ DESCRIPTION: - Action Camera: Black Bird FPV flies with an action cam and therefor uses higher PIDs. If you don't use an action camera choose that setting for lower pids. (Lower P and D by 5)
@@ -39,7 +40,7 @@
 	#$ DESCRIPTION: 
 
 # -- Warning --
-	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication
+	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! This is a very specific tune that can lead to burnt motors and flyaways. Test carefully!
 
 # -- Includes --
 	#$ INCLUDE: presets/4.5/tune/defaults.txt
