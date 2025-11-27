@@ -40,9 +40,9 @@
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: Motor Timing: 24 deg <br>
-	#$ DESCRIPTION: Demag Compensation: Low <br>
-	#$ DESCRIPTION: PWM Frequency: 48 kHz 
+	#$ DESCRIPTION: **Motor Timing:** 24 deg <br>
+	#$ DESCRIPTION: **Demag Compensation:** Low <br>
+	#$ DESCRIPTION: **PWM Frequency:** 48 kHz 
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Other Recommendations
 	#$ DESCRIPTION: -----------
@@ -61,6 +61,9 @@
 
 # -- Warning --
 	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! **WARNING:** This is an aggressive tune that may cause overheating motors, oscillations, or flyaways if applied to unsuitable hardware. Apply cautiously and test thoroughly.
+
+# -- Disclaimer --
+	#$ DISCLAIMER: test disclaimer
 
 # -- Includes --
 	#$ INCLUDE: presets/4.5/tune/defaults.txt
@@ -130,7 +133,7 @@
 	set pidsum_limit_yaw = 900
 
 # -- Options --
-	#$ OPTION_GROUP BEGIN: Action Cam and Flying Altitude (ASL)
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Action Cam and Flying Altitude (ASL)
 		#$ OPTION BEGIN (CHECKED): 1000m with Action Cam
 			set p_pitch = 70
 			set i_pitch = 120
@@ -203,7 +206,7 @@
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
-	#$ OPTION_GROUP BEGIN (EXCLUSIVE): Propeller
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Propeller
 		#$ OPTION BEGIN (CHECKED): 4.9 inch
 			set motor_idle = 540
 		#$ OPTION END
@@ -212,7 +215,7 @@
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
-	#$ OPTION_GROUP BEGIN: Radio Link
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Radio Link
 		#$ OPTION BEGIN (CHECKED): BB Preset
 			set rc_smoothing = ON
 			set rc_smoothing_setpoint_cutoff = 0
@@ -241,7 +244,7 @@
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
-	#$ OPTION_GROUP BEGIN: Deadband
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Deadband
 		#$ OPTION BEGIN (CHECKED): For high Center Rates
 			set deadband = 3
 			set yaw_deadband = 4
