@@ -9,11 +9,11 @@
 	#$ PARSER: MARKED
 
 # -- Description --
-	#$ DESCRIPTION: >>> Black Bird FPV Next Level Preset <<<
+	#$ DESCRIPTION: Black Bird FPV Next Level Preset
 	#$ DESCRIPTION: -----------
 	#$ DESCRIPTION: <img src="https://img.youtube.com/vi/B6UteJvRtjU/maxresdefault.jpg" width="350px"/>
 	#$ DESCRIPTION: 
-	#$ DESCRIPTION: [BB NEXT LEVEL YouTube Video](https://youtu.be/B6UteJvRtjU)
+	#$ DESCRIPTION: - YouTube Video: [BB NEXT LEVEL](https://youtu.be/B6UteJvRtjU)
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Description:
 	#$ DESCRIPTION: -----------
@@ -21,9 +21,9 @@
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Recommended ESC Settings
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: Motor Timing: 24 deg
-	#$ DESCRIPTION: Demag Compensation: Low
-	#$ DESCRIPTION: PWM Frequency: 48 kHz
+	#$ DESCRIPTION: Motor Timing: 24 deg <br>
+	#$ DESCRIPTION: Demag Compensation: Low <br>
+	#$ DESCRIPTION: PWM Frequency: 48 kHz 
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Other Recommendations
 	#$ DESCRIPTION: -----------
@@ -37,7 +37,8 @@
 	#$ DESCRIPTION: - Radio Link: The Betaflight developers recommend the radio link presets, but Black Bird FPV suggests generally low smoothing.
 	#$ DESCRIPTION: - Deadband: If using high rates (fast movement even with low stick deflection) then a higher deadband is necessary for sharp stops of movements.
 	#$ DESCRIPTION: - Propeller: 5.1 inch propeller need a lower motor idle % compared to 4.9 inch.
-	#$ DESCRIPTION: 
+	#$ DESCRIPTION: <br>
+	#$ DESCRIPTION: <br>
 
 # -- Warning --
 	#$ WARNING: **DO NOT** select this preset unless your ESCs support Bi-Directional DSHOT communication! This is a very specific tune that can lead to burnt motors and flyaways. Test carefully!
