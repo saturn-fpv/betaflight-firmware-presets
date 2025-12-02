@@ -592,6 +592,22 @@
       "priority": 0
     },
     {
+      "fullPath": "presets/2025.12/osd/saturn_fpv_bf_setup.txt",
+      "hash": "c31ba36cadf5780beda1381545899db648c51366dc8b7f5aaf2d9e4ad8a00826",
+      "title": "Saturn_FPV Setup",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "Saturn",
+        "Saturn_FPV"
+      ],
+      "author": "Saturn_FPV",
+      "priority": 0
+    },
+    {
       "fullPath": "presets/2025.12/other/blackbox_disable.txt",
       "hash": "88b85f4fcc0dc75355af77a5d5a117e42a678fad18be0891178a437b456e13aa",
       "title": "2025.12 Blackbox disable settings",
@@ -6205,7 +6221,7 @@
     },
     {
       "fullPath": "presets/4.5/osd/saturn_fpv_bf_setup.txt",
-      "hash": "2be802422c76f0cbbf139c1fdea18bce7892a00c58310f5600831384088486c6",
+      "hash": "921599daa58e3de4bf5a989716d485f8db7298e0145dda827d1e1486b743993e",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "4.5"

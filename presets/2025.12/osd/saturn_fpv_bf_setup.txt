@@ -1,7 +1,7 @@
 # -- Header --
 	#$ TITLE: Saturn_FPV Setup
-	#$ FIRMWARE_VERSION: 4.5
-#	#$ FIRMWARE_VERSION: 2025.12
+#	#$ FIRMWARE_VERSION: 4.5
+	#$ FIRMWARE_VERSION: 2025.12
 	#$ CATEGORY: OSD
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Saturn, Saturn_FPV
@@ -72,12 +72,6 @@ set pilot_name = saturn_fpv
 	set report_cell_voltage = ON
 
 # -- Modes --
-	aux 0 0 0 1800 2100 0 0
-	aux 1 1 3 1800 2100 0 0
-	aux 2 27 2 1800 2100 0 0
-	aux 3 13 3 1800 2100 0 0
-	aux 4 28 4 900 1200 0 0
-	aux 5 35 5 1800 2100 0 0
 
 # -- Adjustments --
 	adjrange 0 0 1 900 2100 12 1 0 0
@@ -92,9 +86,6 @@ set pilot_name = saturn_fpv
 		set osd_alt_alarm = 9999
 		set osd_tim1 = 0
 		set osd_tim2 = 1
-	# Size
-		set osd_canvas_width = 53
-		set osd_canvas_height = 20
 	# Position
 		set osd_vbat_pos = 301
 		set osd_rssi_pos = 152
@@ -187,6 +178,21 @@ set pilot_name = saturn_fpv
 		#$ OPTION BEGIN (UNCHECKED): no GPS
 			set osd_warn_bitmask = 50173
 			set osd_stat_bitmask = 8521380
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Modes
+		#$ OPTION BEGIN (CHECKED): Standard
+			aux 0 0 0 1800 2100 0 0
+			aux 1 1 3 1800 2100 0 0
+			aux 2 27 2 1800 2100 0 0
+			aux 3 13 3 1800 2100 0 0
+			aux 4 28 4 900 1200 0 0
+			aux 5 35 5 1800 2100 0 0
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Pos & Alt Hold
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Chirp
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
