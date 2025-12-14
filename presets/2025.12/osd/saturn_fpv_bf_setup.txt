@@ -29,108 +29,113 @@
 
 # -- Includes --
 
-# -- Setup --
+# -- General Settings --
+	#$ OPTION_GROUP BEGIN: General Settings
+		#$ OPTION BEGIN (CHECKED): General Settings
+		
+			# -- Setup --
 
-# -- Ports --
+			# -- Ports --
 
-# -- Configuration --
+			# -- Configuration --
 
-	feature -AIRMODE
-	feature TELEMETRY
-	feature OSD
+				feature -AIRMODE
+				feature TELEMETRY
+				feature OSD
+				beacon RX_LOST
+				beacon RX_SET
+				set small_angle = 180
+				set fpv_mix_degrees = 25
+				set pilot_name = saturn_fpv
 
-	beacon RX_LOST
-	beacon RX_SET
-	
-	set small_angle = 180
-	set fpv_mix_degrees = 25
+			# -- Power & Battery --
+				set vbat_max_cell_voltage = 440
+				set vbat_min_cell_voltage = 340
 
-	
-set pilot_name = saturn_fpv
+			# -- Failsafe --
+				set failsafe_switch_mode = STAGE2
+				rxfail 3 s 1300 #throttle hover set
+				rxfail 5 s 2000 #aux5 angle mode set
 
-# -- Power & Battery --
-	set vbat_max_cell_voltage = 440
-	set vbat_min_cell_voltage = 340
+			# -- PID Profile Settings --
 
-# -- Failsafe --
-	set failsafe_switch_mode = STAGE2
-	rxfail 3 s 1300 #throttle hover set
-	rxfail 5 s 2000 #aux5 angle mode set
+			# -- Rateprofile Settings --
 
-# -- PID Profile Settings --
+			# -- Filter Settings --
 
-# -- Rateprofile Settings --
+			# -- Receiver --
+				map AETR1234
+				set min_check = 1010
+				set max_check = 1990
+				set deadband = 2
+				set yaw_deadband = 2
+				set report_cell_voltage = ON
 
-# -- Filter Settings --
+			# -- Modes --
 
-# -- Receiver --
-	map AETR1234
-	set min_check = 1010
-	set max_check = 1990
-	set deadband = 2
-	set yaw_deadband = 2
-	set report_cell_voltage = ON
+			# -- Adjustments --
+				adjrange 0 0 1 900 2100 12 1 0 0
+				adjrange 1 0 6 900 2100 29 6 0 0
 
-# -- Modes --
+			# -- Motors --
 
-# -- Adjustments --
-	adjrange 0 0 1 900 2100 12 1 0 0
-	adjrange 1 0 6 900 2100 29 6 0 0
+			# -- OSD --
+				# Alarms & Timers
+					set osd_link_quality_alarm = 60
+					set osd_cap_alarm = 9999
+					set osd_alt_alarm = 9999
+					set osd_tim1 = 0
+					set osd_tim2 = 1
+				# Position
+					set osd_vbat_pos = 301
+					set osd_rssi_pos = 152
+					set osd_link_quality_pos = 14359
+					set osd_link_tx_power_pos = 13320
+					set osd_rssi_dbm_pos = 15361
+					set osd_tim_2_pos = 15855
+					set osd_flymode_pos = 14944
+					set osd_throttle_pos = 15377
+					set osd_vtx_channel_pos = 373
+					set osd_crosshairs_pos = 349
+					set osd_ah_sbar_pos = 8506
+					set osd_ah_pos = 8410
+					set osd_current_pos = 15438
+					set osd_mah_drawn_pos = 14973
+					set osd_motor_diag_pos = 8760
+					set osd_craft_name_pos = 384
+					set osd_gps_speed_pos = 12480
+					set osd_gps_lon_pos = 12320
+					set osd_gps_lat_pos = 12288
+					set osd_gps_sats_pos = 12352
+					set osd_home_dir_pos = 12544
+					set osd_home_dist_pos = 12576
+					set osd_flight_dist_pos = 12640
+					set osd_compass_bar_pos = 8310
+					set osd_altitude_pos = 28800
+					set osd_power_pos = 388
+					set osd_pidrate_profile_pos = 14912
+					set osd_warnings_pos = 14838
+					set osd_avg_cell_voltage_pos = 14965
+					set osd_disarmed_pos = 14519
+					set osd_esc_tmp_pos = 8640
+					set osd_esc_rpm_pos = 9481
+					set osd_esc_rpm_freq_pos = 9488
+					set osd_flip_arrow_pos = 14490
+					set osd_core_temp_pos = 8608
+					set osd_log_status_pos = 9650
+					set osd_rate_profile_name_pos = 544
+					set osd_pid_profile_name_pos = 544
+					set osd_efficiency_pos = 12903
+					set osd_sys_vtx_temp_pos = 480
 
-# -- Motors --
+			# -- Blackbox --
+				set debug_mode = FFT_FREQ
 
-# -- OSD --
-	# Alarms & Timers
-		set osd_link_quality_alarm = 60
-		set osd_cap_alarm = 9999
-		set osd_alt_alarm = 9999
-		set osd_tim1 = 0
-		set osd_tim2 = 1
-	# Position
-		set osd_vbat_pos = 301
-		set osd_rssi_pos = 152
-		set osd_link_quality_pos = 14359
-		set osd_link_tx_power_pos = 13320
-		set osd_rssi_dbm_pos = 15361
-		set osd_tim_2_pos = 15855
-		set osd_flymode_pos = 14944
-		set osd_throttle_pos = 15377
-		set osd_vtx_channel_pos = 373
-		set osd_crosshairs_pos = 349
-		set osd_ah_sbar_pos = 8506
-		set osd_ah_pos = 8410
-		set osd_current_pos = 15438
-		set osd_mah_drawn_pos = 14973
-		set osd_motor_diag_pos = 8760
-		set osd_craft_name_pos = 384
-		set osd_gps_speed_pos = 12480
-		set osd_gps_lon_pos = 12320
-		set osd_gps_lat_pos = 12288
-		set osd_gps_sats_pos = 12352
-		set osd_home_dir_pos = 12544
-		set osd_home_dist_pos = 12576
-		set osd_flight_dist_pos = 12640
-		set osd_compass_bar_pos = 8310
-		set osd_altitude_pos = 28800
-		set osd_power_pos = 388
-		set osd_pidrate_profile_pos = 14912
-		set osd_warnings_pos = 14838
-		set osd_avg_cell_voltage_pos = 14965
-		set osd_disarmed_pos = 14519
-		set osd_esc_tmp_pos = 8640
-		set osd_esc_rpm_pos = 9481
-		set osd_esc_rpm_freq_pos = 9488
-		set osd_flip_arrow_pos = 14490
-		set osd_core_temp_pos = 8608
-		set osd_log_status_pos = 9650
-		set osd_rate_profile_name_pos = 544
-		set osd_pid_profile_name_pos = 544
-		set osd_efficiency_pos = 12903
-		set osd_sys_vtx_temp_pos = 480
+			# -- CLI --
 
-# -- Blackbox --
+		#$ OPTION END
+	#$ OPTION_GROUP END
 
-# -- CLI --
 
 
 # -- Options --
@@ -174,6 +179,8 @@ set pilot_name = saturn_fpv
 			set gps_rescue_max_angle = 35
 			set gps_rescue_min_sats = 6
 			set gps_rescue_allow_arming_without_fix = ON
+			set failsafe_switch_mode = STAGE2
+			set failsafe_procedure = GPS-RESCUE
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): no GPS
 			set osd_warn_bitmask = 50173
@@ -191,6 +198,14 @@ set pilot_name = saturn_fpv
 			aux 5 35 5 1800 2100 0 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Pos & Alt Hold
+			aux 0 0 0 1800 2100 0 0
+			aux 1 1 3 1800 2100 0 0
+			aux 2 3 2 1300 1700 0 0
+			aux 3 27 2 1800 2100 0 0
+			aux 4 11 2 1300 1700 0 0
+			aux 5 13 3 1800 2100 0 0
+			aux 6 28 4 900 1200 0 0
+			aux 7 35 5 1800 2100 0 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Chirp
 		#$ OPTION END
@@ -432,6 +447,7 @@ set pilot_name = saturn_fpv
 		#$ OPTION BEGIN (UNCHECKED): Jeno Wasp
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Jeno Halo
+			set ibata_scale = 220
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Mars
 		#$ OPTION END
