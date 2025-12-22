@@ -1,23 +1,12 @@
 # -- Header --
 	#$ TITLE: Black Bird FPV | Next Level
 	#$ FIRMWARE_VERSION: 4.5
-#	#$ FIRMWARE_VERSION: 2025.12
 	#$ CATEGORY: TUNE
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Black Bird FPV, Blackbird, Next Level, SBANG, 6S, Freestyle, 5 inch, 5"
 	#$ AUTHOR: Black Bird FPV (Tune) / Saturn_FPV (Preset)
 	#$ PARSER: MARKED
 	#$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/nn
-#	#$ FORCE_OPTIONS_REVIEW
-
-# -- To Do --
-	# Seperate 4.5 and 2025.12
-	# Check upcoming 2025.12 rc link defaults
-	# Try on a 4.5 quad and on a 2025.12 quad
-	# Test resetting and then diff all
-	# Wait for 2025.12 defaults idle bug being fixed (issue #528)
-	# Check, compare and add 4.5 parameters, values and defaults.
-	# Maybe remove DSHOT600 or add as an option
 
 # -- Description --
 	#$ DESCRIPTION: Black Bird FPV - Next Level Preset
@@ -63,8 +52,6 @@
 # -- Includes --
 	#$ INCLUDE: presets/4.5/tune/defaults.txt
 	#$ INCLUDE: presets/4.5/filters/defaults.txt
-#	#$ INCLUDE: presets/2025.12/tune/defaults.txt
-#	#$ INCLUDE: presets/2025.12/filters/defaults.txt
 
 # -- PID Tune --
 	set p_pitch = 70
@@ -106,13 +93,11 @@
 	set yaw_lowpass_hz = 0
 	
 # -- RC Link --
-	# only via option
 	
 # -- Motor Settings --
 	set dshot_idle_value = 540
 	set dshot_bidir = ON
 	set motor_pwm_protocol = DSHOT600
-
 
 # -- CLI Options --
 	set pidsum_limit = 1000
@@ -216,19 +201,15 @@
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 50Hz HD Freestyle
 			#$ INCLUDE: presets/4.3/rc_link/generic/50hz_hd_freestyle.txt
-#			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_hd_freestyle.txt
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 150Hz HD Freestyle
 			#$ INCLUDE: presets/4.3/rc_link/generic/150hz_hd_freestyle.txt
-#			#$ INCLUDE: presets/2025.12/rc_link/generic/150hz_hd_freestyle.txt
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 250Hz HD Freestyle
 			#$ INCLUDE: presets/4.3/rc_link/generic/250hz_hd_freestyle.txt
-#			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_hd_freestyle.txt
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 500Hz HD Freestyle
 			#$ INCLUDE: presets/4.3/rc_link/generic/500hz_hd_freestyle.txt
-#			#$ INCLUDE: presets/2025.12/rc_link/generic/500hz_hd_freestyle.txt
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
