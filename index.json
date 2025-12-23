@@ -353,7 +353,7 @@
     },
     {
       "fullPath": "presets/2025.12/osd/saturn_fpv_bf_setup.txt",
-      "hash": "4fadaed4989de14e44d2fd48c19143bc7dc67e85fecceb8d06f68b4f6a736335",
+      "hash": "2477852babcdc097ef8168dc1e9679f9d832e8eed3c5f1ba04a74b761a2ddf2c",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -2960,7 +2960,7 @@
     },
     {
       "fullPath": "presets/4.5/osd/saturn_fpv_bf_setup.txt",
-      "hash": "639061e572ce4769e8e3e44fe8676ad4023e367051b0436ca5ac3e1629b24fa9",
+      "hash": "134ac88ff785adeff46b7559f5c3968d663e5c52ec2ac6cfd5a57b12b903992c",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "4.5"
