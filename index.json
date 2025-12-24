@@ -1738,7 +1738,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/blackbird_nextlevel.txt",
-      "hash": "64140779c78e1f6991d5dcbe8bf6323f521c4e8ba5ba8ad229fa40ec12f04c1e",
+      "hash": "cadc5efcbe15db4d70ffe6727514a6f0ad72e988515800a82b4eefddea953478",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
         "2025.12"
@@ -8555,7 +8555,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/blackbird_nextlevel.txt",
-      "hash": "71e87ee72063b7facf15482f4c420e3362986098f48d100166ad1bb11aeeb7c0",
+      "hash": "7d56b97b9b23bf3a97eabaeea023ba407226a09a8a451654df11622e618ff201",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
         "4.5"
