@@ -26,7 +26,7 @@
 # -- Includes --
 
 # -- General Settings --
-	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) General Settings
+	#$ OPTION_GROUP BEGIN: General Settings
 		#$ OPTION BEGIN (CHECKED): General Settings
 		
 			# -- Setup --
@@ -34,6 +34,7 @@
 			# -- Ports --
 
 			# -- Configuration --
+				feature -LED_STRIP
 				feature -AIRMODE
 				feature TELEMETRY
 				feature OSD
@@ -134,6 +135,7 @@
 
 			# -- Blackbox --
 				set debug_mode = FFT_FREQ
+				set blackbox_sample_rate = 1/2
 
 			# -- CLI --
 
@@ -172,7 +174,9 @@
 			set gps_sbas_mode = AUTO
 			set gps_ublox_use_galileo = ON
 			set gps_set_home_point_once = ON
-			set gps_rescue_ground_speed = 1500
+			set gps_rescue_alt_mode = CURRENT_ALT
+			set gps_rescue_initial_climb = 100
+			set gps_rescue_ground_speed = 2000
 			set gps_rescue_max_angle = 35
 			set gps_rescue_min_sats = 6
 			set gps_rescue_allow_arming_without_fix = ON
