@@ -1,0 +1,457 @@
+# -- Header --
+	#$ TITLE: Saturn_FPV Setup
+	#$ FIRMWARE_VERSION: 2025.12
+	#$ CATEGORY: OSD
+	#$ STATUS: EXPERIMENTAL
+	#$ KEYWORDS: Saturn, Saturn_FPV
+	#$ AUTHOR: Saturn_FPV
+	#$ PARSER: MARKED
+	#$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/nn
+#	#$ FORCE_OPTIONS_REVIEW
+
+# -- To Do --
+	# Mode und feature für Chirp
+
+# -- Description --
+	#$ DESCRIPTION: Description:
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: Saturn_FPV Betaflight Setup <br>
+	#$ DESCRIPTION: <br>
+	#$ DESCRIPTION: 
+	#$ DESCRIPTION: Option Explanation
+	#$ DESCRIPTION: -----------
+	#$ DESCRIPTION: - **Bla:** Blub
+	#$ DESCRIPTION: <br>
+	#$ DESCRIPTION: <br>
+
+# -- Includes --
+
+# -- General Settings --
+	#$ OPTION_GROUP BEGIN: General Settings
+		#$ OPTION BEGIN (CHECKED): General Settings
+		
+			# -- Setup --
+
+			# -- Ports --
+
+			# -- Configuration --
+
+				feature -AIRMODE
+				feature TELEMETRY
+				feature OSD
+				beacon RX_LOST
+				beacon RX_SET
+				set small_angle = 180
+				set fpv_mix_degrees = 25
+				set pilot_name = saturn_fpv
+
+			# -- Power & Battery --
+				set vbat_max_cell_voltage = 440
+				set vbat_min_cell_voltage = 340
+
+			# -- Failsafe --
+				set failsafe_switch_mode = STAGE2
+				rxfail 3 s 1300 #throttle hover set
+				rxfail 7 s 2000 #aux5 angle mode set
+
+			# -- PID Profile Settings --
+
+			# -- Rateprofile Settings --
+
+			# -- Filter Settings --
+
+			# -- Receiver --
+				map AETR1234
+				set min_check = 1010
+				set max_check = 1990
+				set deadband = 2
+				set yaw_deadband = 2
+				set report_cell_voltage = ON
+
+			# -- Modes --
+
+			# -- Adjustments --
+				adjrange 0 0 1 900 2100 12 1 0 0
+				adjrange 1 0 6 900 2100 29 6 0 0
+
+			# -- Motors --
+
+			# -- OSD --
+				# Alarms & Timers
+					set osd_link_quality_alarm = 60
+					set osd_cap_alarm = 9999
+					set osd_alt_alarm = 9999
+					set osd_tim1 = 0
+					set osd_tim2 = 1
+				# Position
+					set osd_vbat_pos = 301
+					set osd_rssi_pos = 152
+					set osd_link_quality_pos = 14359
+					set osd_link_tx_power_pos = 13320
+					set osd_rssi_dbm_pos = 15361
+					set osd_tim_2_pos = 15855
+					set osd_flymode_pos = 14944
+					set osd_throttle_pos = 15377
+					set osd_vtx_channel_pos = 373
+					set osd_crosshairs_pos = 349
+					set osd_ah_sbar_pos = 8506
+					set osd_ah_pos = 8410
+					set osd_current_pos = 15438
+					set osd_mah_drawn_pos = 14973
+					set osd_motor_diag_pos = 8760
+					set osd_craft_name_pos = 384
+					set osd_gps_speed_pos = 12480
+					set osd_gps_lon_pos = 12320
+					set osd_gps_lat_pos = 12288
+					set osd_gps_sats_pos = 12352
+					set osd_home_dir_pos = 12544
+					set osd_home_dist_pos = 12576
+					set osd_flight_dist_pos = 12640
+					set osd_compass_bar_pos = 8310
+					set osd_altitude_pos = 28800
+					set osd_power_pos = 388
+					set osd_pidrate_profile_pos = 14912
+					set osd_warnings_pos = 14838
+					set osd_avg_cell_voltage_pos = 14965
+					set osd_disarmed_pos = 14519
+					set osd_esc_tmp_pos = 8640
+					set osd_esc_rpm_pos = 9481
+					set osd_esc_rpm_freq_pos = 9488
+					set osd_flip_arrow_pos = 14490
+					set osd_core_temp_pos = 8608
+					set osd_log_status_pos = 9650
+					set osd_rate_profile_name_pos = 544
+					set osd_pid_profile_name_pos = 544
+					set osd_efficiency_pos = 12903
+					set osd_sys_vtx_temp_pos = 480
+
+			# -- Blackbox --
+				set debug_mode = FFT_FREQ
+
+			# -- CLI --
+
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+
+
+# -- Options --
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Radio Link
+		#$ OPTION BEGIN (UNCHECKED): Official 50Hz HD Freestyle
+			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_hd_freestyle.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 250Hz HD Freestyle
+			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_hd_freestyle.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 250Hz Freestyle
+			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_freestyle.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official D500Hz Freestyle
+			#$ INCLUDE: presets/2025.12/rc_link/generic/500hz_freestyle.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official D500Hz Race
+			#$ INCLUDE: presets/2025.12/rc_link/generic/500hz_race.txt
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) GPS
+		#$ OPTION BEGIN (CHECKED): with GPS
+			feature GPS
+			set osd_warn_bitmask = 56317
+			set osd_stat_bitmask = 8785596
+			set gps_sbas_mode = AUTO
+			set gps_ublox_use_galileo = ON
+			set gps_set_home_point_once = ON
+			set gps_rescue_ground_speed = 1500
+			set gps_rescue_max_angle = 35
+			set gps_rescue_min_sats = 6
+			set gps_rescue_allow_arming_without_fix = ON
+			set failsafe_procedure = GPS-RESCUE
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): no GPS
+			set osd_warn_bitmask = 50173
+			set osd_stat_bitmask = 8521380
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Modes
+		#$ OPTION BEGIN (CHECKED): Standard
+			aux 0 0 0 1800 2100 0 0
+			aux 1 1 3 1800 2100 0 0
+			aux 2 27 2 1800 2100 0 0
+			aux 3 13 3 1800 2100 0 0
+			aux 4 28 4 900 1200 0 0
+			aux 5 35 5 1800 2100 0 0
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Pos & Alt Hold
+			aux 0 0 0 1800 2100 0 0
+			aux 1 1 3 1800 2100 0 0
+			aux 2 3 2 1300 1700 0 0
+			aux 3 27 2 1800 2100 0 0
+			aux 4 11 2 1300 1700 0 0
+			aux 5 13 3 1800 2100 0 0
+			aux 6 28 4 900 1200 0 0
+			aux 7 35 5 1800 2100 0 0
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Chirp
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: CLI Extras
+		#$ OPTION BEGIN (UNCHECKED): pidsum limit 1000
+				set pidsum_limit = 1000
+				set pidsum_limit_yaw = 1000
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): pidsum limit 500, 400 (DEFAULT)
+				set pidsum_limit = 500
+				set pidsum_limit_yaw = 400
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Crash Recovery ON (Whoops)
+			set crash_recovery = ON
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Crash Recovery OFF (DEFAULT)
+			set crash_recovery = OFF
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Feedforward Boost 20
+			set feedforward_boost = 20
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Feedforward Boost 15 (DEFAULT)
+			set feedforward_boost = 15
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Runaway Takeoff Prevention ON (DEFAULT)
+			runaway_takeoff_prevention = ON
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Runaway Takeoff Prevention OFF
+			runaway_takeoff_prevention = OFF
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 100,40,60
+			set rpm_filter_weights = 100,40,60
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 100 (DEFAULT)
+			rpm_filter_weights = 100,100,100
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Fade Range 75
+			set rpm_filter_fade_range_hz = 75
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Fade Range 50 (DEFAULT)
+			set rpm_filter_fade_range_hz = 50
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 1000
+			set rpm_filter_q = 1000
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 500 (DEFAULT)
+			rpm_filter_q = 500
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Rateprofile 1
+		#$ OPTION BEGIN (CHECKED): Angle Wobble Script 150
+			rateprofile 0
+			set roll_rc_rate = 15
+			set pitch_rc_rate = 15
+			set yaw_rc_rate = 15
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 15
+			set pitch_srate = 15
+			set yaw_srate = 15
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Cinelog30 80 400 0.5 (throttle scale & expo)
+			rateprofile 0
+			set roll_rc_rate = 8
+			set pitch_rc_rate = 8
+			set yaw_rc_rate = 8
+			set roll_expo = 50
+			set pitch_expo = 50
+			set yaw_expo = 50
+			set roll_srate = 40
+			set pitch_srate = 40
+			set yaw_srate = 40
+			set thr_mid = 40
+			set thr_expo = 80
+			set throttle_limit_type = SCALE
+			set throttle_limit_percent = 70
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual slow 100 500 0.5
+			rateprofile 0
+			set roll_rc_rate = 10
+			set pitch_rc_rate = 10
+			set yaw_rc_rate = 10
+			set roll_expo = 50
+			set pitch_expo = 50
+			set yaw_expo = 50
+			set roll_srate = 50
+			set pitch_srate = 50
+			set yaw_srate = 50
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 300
+			rateprofile 0
+			set roll_rc_rate = 30
+			set pitch_rc_rate = 30
+			set yaw_rc_rate = 30
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 30
+			set pitch_srate = 30
+			set yaw_srate = 30
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 400
+			rateprofile 0
+			set roll_rc_rate = 40
+			set pitch_rc_rate = 40
+			set yaw_rc_rate = 40
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 40
+			set pitch_srate = 40
+			set yaw_srate = 40
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 500
+			rateprofile 0
+			set roll_rc_rate = 50
+			set pitch_rc_rate = 50
+			set yaw_rc_rate = 50
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 50
+			set pitch_srate = 50
+			set yaw_srate = 50
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Rateprofile 2
+		#$ OPTION BEGIN (CHECKED): Liftoff Freestyle Dynamic
+			rateprofile 1
+			set rates_type = BETAFLIGHT
+			set roll_rc_rate = 158
+			set pitch_rc_rate = 158
+			set yaw_rc_rate = 146
+			set roll_expo = 35
+			set pitch_expo = 35
+			set yaw_expo = 30
+			set roll_srate = 61
+			set pitch_srate = 61
+			set yaw_srate = 62
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual 170 800 0.5
+			rateprofile 1
+			set roll_rc_rate = 17
+			set pitch_rc_rate = 17
+			set yaw_rc_rate = 17
+			set roll_expo = 50
+			set pitch_expo = 50
+			set yaw_expo = 50
+			set roll_srate = 80
+			set pitch_srate = 80
+			set yaw_srate = 80
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Rateprofile 3
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 300
+			rateprofile 2
+			set roll_rc_rate = 30
+			set pitch_rc_rate = 30
+			set yaw_rc_rate = 30
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 30
+			set pitch_srate = 30
+			set yaw_srate = 30
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 400
+			rateprofile 2
+			set roll_rc_rate = 40
+			set pitch_rc_rate = 40
+			set yaw_rc_rate = 40
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 40
+			set pitch_srate = 40
+			set yaw_srate = 40
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 500
+			rateprofile 2
+			set roll_rc_rate = 50
+			set pitch_rc_rate = 50
+			set yaw_rc_rate = 50
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 50
+			set pitch_srate = 50
+			set yaw_srate = 50
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual Linear 600
+			rateprofile 2
+			set roll_rc_rate = 60
+			set pitch_rc_rate = 60
+			set yaw_rc_rate = 60
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 60
+			set pitch_srate = 60
+			set yaw_srate = 60
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Actual 300 900 0
+			rateprofile 2
+			set roll_rc_rate = 30
+			set pitch_rc_rate = 30
+			set yaw_rc_rate = 30
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 90
+			set pitch_srate = 90
+			set yaw_srate = 90
+		#$ OPTION END
+		#$ OPTION BEGIN (CHECKED): Actual 400 900 0
+			rateprofile 2
+			set roll_rc_rate = 40
+			set pitch_rc_rate = 40
+			set yaw_rc_rate = 40
+			set roll_expo = 0
+			set pitch_expo = 0
+			set yaw_expo = 0
+			set roll_srate = 90
+			set pitch_srate = 90
+			set yaw_srate = 90
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Motor Direction
+		#$ OPTION BEGIN (CHECKED): props out
+			set yaw_motors_reversed = ON
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): props in (ducted whoop)
+			set yaw_motors_reversed = OFF
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Current Meter Calibration
+		#$ OPTION BEGIN (UNCHECKED): Chimera 185
+			set ibata_scale = 185
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Jeno Wasp
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Jeno Halo
+			set ibata_scale = 220
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Mars
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Pluto
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Mob7
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Micro Apex
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Cinelog30
+		#$ OPTION END
+	#$ OPTION_GROUP END
