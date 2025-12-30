@@ -50,7 +50,7 @@
 
 			# -- Failsafe --
 				set failsafe_switch_mode = STAGE2
-				rxfail 3 s 1300 #throttle hover set
+				rxfail 3 s 1250 #throttle hover set
 				rxfail 7 s 2000 #aux5 angle mode set
 
 			# -- PID Profile Settings --
