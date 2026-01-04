@@ -232,6 +232,7 @@
       "2023",
       "2024",
       "2024 sliders",
+      "2025.12",
       "20ms",
       "25",
       "2500mW",
@@ -343,6 +344,7 @@
       "clean",
       "clear",
       "colour change",
+      "COMPRESSOR",
       "Configure",
       "control",
       "Crossfire",
@@ -428,6 +430,7 @@
       "jhemcu",
       "juicy",
       "justice",
+      "JWebb",
       "karate",
       "KarateBrot",
       "kim",
@@ -436,7 +439,7 @@
       "LeadFingers",
       "League",
       "leds",
-      "Limon",
+      "limon",
       "link",
       "Llama",
       "log",
@@ -535,6 +538,7 @@
       "SBUS fast",
       "secretfader",
       "settek",
+      "Sh*t pilot",
       "shames",
       "Sharjah",
       "shitpilot",
@@ -577,7 +581,7 @@
       "TinyApe",
       "TinyTrainer",
       "toothpic",
-      "Toothpick",
+      "toothpick",
       "Tracer",
       "trainer",
       "tramp",
@@ -608,6 +612,7 @@
       "viki",
       "viper",
       "viper lite",
+      "Viper Racing",
       "vista",
       "Voltage",
       "vt5804",
@@ -1738,7 +1743,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/blackbird_nextlevel.txt",
-      "hash": "cadc5efcbe15db4d70ffe6727514a6f0ad72e988515800a82b4eefddea953478",
+      "hash": "fafe8bb061da9993ada37de9a6fbbb2c8a22d384ee54fb31f70825cc2abdefa0",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
         "2025.12"
@@ -1760,7 +1765,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/defaults.txt",
-      "hash": "2a8c8ca333c99f8a1e46109e16896020923fa676a4327a965746e6e37f2844cc",
+      "hash": "45ed771374ec26cb8e755e2db3647ba01229c72daa5aad7b3b66764f2ba25317",
       "title": "Betaflight 2025.12 TUNE defaults",
       "firmware_version": [
         "2025.12"
@@ -1779,8 +1784,37 @@
       "priority": 0
     },
     {
+      "fullPath": "presets/2025.12/tune/karate/karate_race_2025.txt",
+      "hash": "c7e432d5a04d6ce10f2b5b3f63085a6d605484dbd0517de2e4bb9200e4ce63bd",
+      "title": "Karate Race 6s 5\" 2025.12",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "karate",
+        "6S",
+        "race",
+        "world champion",
+        "5 inch",
+        "5\"",
+        "sugarK",
+        "limon",
+        "ctzsnooze",
+        "KarateBrot",
+        "2025.12",
+        "Sh*t pilot",
+        "Viper Racing",
+        "COMPRESSOR",
+        "JWebb"
+      ],
+      "author": "sugarK",
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_3_4_Inch_EasyTune.txt",
-      "hash": "6f869075848a27bed1ec4dd92b41397e3f014c534c87a55fba6e5a260678ea7f",
+      "hash": "e0e75a811497af6648c1cb8ff89bc4cd96e83fa5b6d1cb2562714f89c89c6087",
       "title": "SupaflyFPV Freestyle 3/4 Inch",
       "firmware_version": [
         "2025.12"
@@ -1803,7 +1837,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_5_Inch_EasyTune.txt",
-      "hash": "094f8337944d879b84798e9b1d6c0b5d5a6cace61b89852f4a1d3021db9f7ec8",
+      "hash": "52b170e36a168034765d986d7a29be17c613a2d8e63b4d5b6aa8fc42953b9eaa",
       "title": "SupaflyFPV Freestyle 5 Inch",
       "firmware_version": [
         "2025.12"
@@ -1824,7 +1858,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_6_and_EasyTune.txt",
-      "hash": "932135475d1e307b3e6d54e9eff88c08db5653c75a2898445962a29828d37a04",
+      "hash": "ad637ec3692e0094cc695ff0a3ff33e02ae4a36f995c426eda04b7dfee2966dd",
       "title": "SupaflyFPV Freestyle 6 Inch",
       "firmware_version": [
         "2025.12"
@@ -1845,7 +1879,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_7_Inch_EasyTune.txt",
-      "hash": "70f2569c7d5b1c41b4f238b966307fa0c4f3e4c3e057a65e5cbe920210895c93",
+      "hash": "a96142ed1323f429b09b0133ac2d004f4be2c9edc6c5a729661fcd0de975253b",
       "title": "SupaflyFPV Freestyle 7 Inch",
       "firmware_version": [
         "2025.12"
@@ -1862,6 +1896,233 @@
         "7\""
       ],
       "author": "SupaflyFPV",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_10in.txt",
+      "hash": "3bc72b8cff643ebac22e45253d1f6704862314beb736d0f3c850d3b2f4667c85",
+      "title": "UAV Tech - 10\" (1400-1700g | 31xx motors)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "10in",
+        "10\"",
+        "freestyle"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_5in_Freestyle_575-650.txt",
+      "hash": "4e270574724a1bcb2febdfe740e4dffc040abc26c694cff4620e96ad0f766952",
+      "title": "UAV Tech - 5\" Freestyle withOUT GoPro (575-650g AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "5in",
+        "5\"",
+        "freestyle"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_5in_Freestyle_650-750.txt",
+      "hash": "d2dc006dd0008b7e7dacfcad26ab0fbd6a1b5484bf362d3833bd70f206112572",
+      "title": "UAV Tech - 5\" Freestyle with GoPro (650-750g AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "5in",
+        "5\"",
+        "freestyle"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_5in_Race_500-575.txt",
+      "hash": "6773d28d8e599162915630cbea5616e64b0e79c107888a9733c1f3ab8697a278",
+      "title": "UAV Tech - 5\" Race (500-575g AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "5in",
+        "5\"",
+        "race",
+        "racing"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_6-7in.txt",
+      "hash": "5aa33fa2da65fe3e0d88c74d495f458ec098a1b43f45562f0ad20ce1c5aef480",
+      "title": "UAV Tech - 6\"/7\" (750-1000g AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "6in",
+        "7in",
+        "6\"",
+        "7\"",
+        "freestyle",
+        "long range"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_8-9in.txt",
+      "hash": "63150b0f9e735a78c1e96308b294978ae810d2b7b877d08e3acbfb027d1981f6",
+      "title": "UAV Tech - 8\"/9\" (1000-1400 AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "8in",
+        "9in",
+        "8\"",
+        "9\"",
+        "freestyle",
+        "long range"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_Cinelifter_8-9in.txt",
+      "hash": "0e279d76f572d309b2e5cbb3b99f15922d73f65a19e7f80c9f4afa9703f80618",
+      "title": "UAV Tech - Cinelifter (8\"/9\" >2,000g AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "6S",
+        "8S",
+        "8in",
+        "9in",
+        "8\"",
+        "9\"",
+        "cinelifter"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_Cinelog.txt",
+      "hash": "1c6cadaa9b82726e7b9f1d06a8970be50f159f4613f4834a773c684b8bc64840",
+      "title": "UAV Tech - Cinelog (250-300g AUW)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "CineLog"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_Cinewhoop.txt",
+      "hash": "d88c2510e12d6c925df856a5a29a2a656c57d3b9508aa931815b63fb66dce2bf",
+      "title": "UAV Tech - Cinewhoop",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "cinewhoop"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_GoFilm20.txt",
+      "hash": "8659b94784b6758851edabdc938d257f55445f0e273ee37608db54e38ccb06bc",
+      "title": "Caddx BNF Gofilm 20",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "Caddx",
+        "Gofilm20"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_Micro.txt",
+      "hash": "e8173acbc58fc60fda7db11033def51f4455ef02b5c54664e195d7b2d7c9c7fd",
+      "title": "UAV Tech - Micro (2\" to 4\")",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "2S",
+        "3S",
+        "4S",
+        "6S",
+        "toothpick",
+        "2in",
+        "2.5in",
+        "3in",
+        "3.5in",
+        "4in"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_Whoop.txt",
+      "hash": "e5e31af88d42834994bfce41f30d6a4b5885a0fe9ea88ced404265d2bad26d68",
+      "title": "UAV Tech - Whoop (1S & 2S)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "whoop"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
       "priority": 1000000000000
     },
     {
@@ -2908,12 +3169,13 @@
     },
     {
       "fullPath": "presets/4.3/rates/SugarK.txt",
-      "hash": "ec1e237c4ab6b382554c03c18433195cc82fe0253ffa28a680b55ed25bdf85ab",
+      "hash": "a3ee0903ea8b08cde89aee1069ccb8b6947f441480b8ed36f10fe1355c6a3324",
       "title": "Sugar k rates",
       "firmware_version": [
         "4.3",
         "4.4",
-        "4.5"
+        "4.5",
+        "2025.12"
       ],
       "category": "RATES",
       "status": "OFFICIAL",
@@ -2930,12 +3192,13 @@
     },
     {
       "fullPath": "presets/4.3/rates/SugarK_whoop.txt",
-      "hash": "9d805ecc28c5645d0770d31e0d2510e8b6cdc4b8994caa5fa98583e3e09f538a",
+      "hash": "3894baa10e5bb8d71351d246d2e47c85476ba974dda8e9ec7b71cbea5f841989",
       "title": "Sugar k Whoop rates",
       "firmware_version": [
         "4.3",
         "4.4",
-        "4.5"
+        "4.5",
+        "2025.12"
       ],
       "category": "RATES",
       "status": "OFFICIAL",
@@ -8555,7 +8818,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/blackbird_nextlevel.txt",
-      "hash": "7d56b97b9b23bf3a97eabaeea023ba407226a09a8a451654df11622e618ff201",
+      "hash": "560bacf26cb95c7c51f446ee811c12610e907e0621e551d4b4f38174717dd79c",
       "title": "Black Bird FPV | Next Level",
       "firmware_version": [
         "4.5"
