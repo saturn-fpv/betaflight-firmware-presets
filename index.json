@@ -232,6 +232,7 @@
       "2023",
       "2024",
       "2024 sliders",
+      "2025.12",
       "20ms",
       "25",
       "2500mW",
@@ -341,6 +342,7 @@
       "clean",
       "clear",
       "colour change",
+      "COMPRESSOR",
       "Configure",
       "control",
       "Crossfire",
@@ -426,6 +428,7 @@
       "jhemcu",
       "juicy",
       "justice",
+      "JWebb",
       "karate",
       "KarateBrot",
       "kim",
@@ -434,7 +437,7 @@
       "LeadFingers",
       "League",
       "leds",
-      "Limon",
+      "limon",
       "link",
       "Llama",
       "log",
@@ -534,6 +537,7 @@
       "SBUS fast",
       "secretfader",
       "settek",
+      "Sh*t pilot",
       "shames",
       "Sharjah",
       "shitpilot",
@@ -607,6 +611,7 @@
       "viki",
       "viper",
       "viper lite",
+      "Viper Racing",
       "vista",
       "Voltage",
       "vt5804",
@@ -685,7 +690,7 @@
     },
     {
       "fullPath": "presets/2025.12/osd/saturn_fpv_bf_setup.txt",
-      "hash": "a06d7216ef4d01108d7a528f41f481f5b8f4abfa71b7dd114209518450587fb9",
+      "hash": "891bda6f0c00dd1032c76f4157476c3a14e5c87da07cc0791bc8bde09c2087c2",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -1753,7 +1758,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/defaults.txt",
-      "hash": "2a8c8ca333c99f8a1e46109e16896020923fa676a4327a965746e6e37f2844cc",
+      "hash": "45ed771374ec26cb8e755e2db3647ba01229c72daa5aad7b3b66764f2ba25317",
       "title": "Betaflight 2025.12 TUNE defaults",
       "firmware_version": [
         "2025.12"
@@ -1770,6 +1775,35 @@
       ],
       "author": "Betaflight",
       "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/tune/karate/karate_race_2025.txt",
+      "hash": "c7e432d5a04d6ce10f2b5b3f63085a6d605484dbd0517de2e4bb9200e4ce63bd",
+      "title": "Karate Race 6s 5\" 2025.12",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "karate",
+        "6S",
+        "race",
+        "world champion",
+        "5 inch",
+        "5\"",
+        "sugarK",
+        "limon",
+        "ctzsnooze",
+        "KarateBrot",
+        "2025.12",
+        "Sh*t pilot",
+        "Viper Racing",
+        "COMPRESSOR",
+        "JWebb"
+      ],
+      "author": "sugarK",
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_3_4_Inch_EasyTune.txt",
@@ -2025,6 +2059,22 @@
       "status": "OFFICIAL",
       "keywords": [
         "cinewhoop"
+      ],
+      "author": "UAV Tech (Mark Spatz)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/uav_tech/UAV_tech_GoFilm20.txt",
+      "hash": "8659b94784b6758851edabdc938d257f55445f0e273ee37608db54e38ccb06bc",
+      "title": "Caddx BNF Gofilm 20",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "Caddx",
+        "Gofilm20"
       ],
       "author": "UAV Tech (Mark Spatz)",
       "priority": 1000000000000
@@ -3112,12 +3162,13 @@
     },
     {
       "fullPath": "presets/4.3/rates/SugarK.txt",
-      "hash": "ec1e237c4ab6b382554c03c18433195cc82fe0253ffa28a680b55ed25bdf85ab",
+      "hash": "a3ee0903ea8b08cde89aee1069ccb8b6947f441480b8ed36f10fe1355c6a3324",
       "title": "Sugar k rates",
       "firmware_version": [
         "4.3",
         "4.4",
-        "4.5"
+        "4.5",
+        "2025.12"
       ],
       "category": "RATES",
       "status": "OFFICIAL",
@@ -3134,12 +3185,13 @@
     },
     {
       "fullPath": "presets/4.3/rates/SugarK_whoop.txt",
-      "hash": "9d805ecc28c5645d0770d31e0d2510e8b6cdc4b8994caa5fa98583e3e09f538a",
+      "hash": "3894baa10e5bb8d71351d246d2e47c85476ba974dda8e9ec7b71cbea5f841989",
       "title": "Sugar k Whoop rates",
       "firmware_version": [
         "4.3",
         "4.4",
-        "4.5"
+        "4.5",
+        "2025.12"
       ],
       "category": "RATES",
       "status": "OFFICIAL",
