@@ -690,7 +690,7 @@
     },
     {
       "fullPath": "presets/2025.12/osd/saturn_fpv_bf_setup.txt",
-      "hash": "54ec280a7336e843b3806542a88f908a3b33f7c08c0a8527d213aa2817b01959",
+      "hash": "1861160e2d817ce162cdc0a4abd459a273fd26384e9f4617e833ec15005d742c",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -1823,7 +1823,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_3_4_Inch_EasyTune.txt",
-      "hash": "e0e75a811497af6648c1cb8ff89bc4cd96e83fa5b6d1cb2562714f89c89c6087",
+      "hash": "680e6bc30a083412d7ae36659ef7b15f642ed91702685d28241738a8c2e3a81b",
       "title": "SupaflyFPV Freestyle 3/4 Inch",
       "firmware_version": [
         "2025.12"
@@ -1846,7 +1846,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_5_Inch_EasyTune.txt",
-      "hash": "52b170e36a168034765d986d7a29be17c613a2d8e63b4d5b6aa8fc42953b9eaa",
+      "hash": "4b1c87106d6a32e355f1544848f3915120096ea1a28c5a7aa172c88b0ecea051",
       "title": "SupaflyFPV Freestyle 5 Inch",
       "firmware_version": [
         "2025.12"
@@ -1867,7 +1867,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_6_and_EasyTune.txt",
-      "hash": "ad637ec3692e0094cc695ff0a3ff33e02ae4a36f995c426eda04b7dfee2966dd",
+      "hash": "4b7114d3b58f9ff966c21d63b618b2e0dc0a935ac6043884d3bab0cef496f1d9",
       "title": "SupaflyFPV Freestyle 6 Inch",
       "firmware_version": [
         "2025.12"
@@ -1888,7 +1888,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/supafly_fpv/SupaflyFPV_Freestyle_7_Inch_EasyTune.txt",
-      "hash": "a96142ed1323f429b09b0133ac2d004f4be2c9edc6c5a729661fcd0de975253b",
+      "hash": "19deb42bdfc5ce7f99b3cbd37db5b55eab0c378527f2f239aced91b5c7232e2a",
       "title": "SupaflyFPV Freestyle 7 Inch",
       "firmware_version": [
         "2025.12"
@@ -9368,7 +9368,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_3_4_Inch_EasyTune.txt",
-      "hash": "a74e9b3e4d95ea46153973ab9ebff69804b9ec57a763ba7159be20b501cef229",
+      "hash": "3fd13f08d7c173b16c31ba206dbd516359294852b32882e412fffc57bfc96258",
       "title": "SupaflyFPV Freestyle 3/4 Inch",
       "firmware_version": [
         "4.5"
@@ -9380,6 +9380,7 @@
         "SupaflyFPV",
         "4S",
         "6S",
+        "8S",
         "Freestyle",
         "3 inch",
         "4 inch",
@@ -9391,7 +9392,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_5_Inch_EasyTune.txt",
-      "hash": "f68f5131112777f3d52687b8aaaa0eb024166b9b4d9558ba922b2a5ffdb03944",
+      "hash": "107973861a552a42bed6b25e4f7af3f328c4185bc448d1e10ef78a3c059892ff",
       "title": "SupaflyFPV Freestyle 5 Inch",
       "firmware_version": [
         "4.5"
@@ -9403,6 +9404,7 @@
         "SupaflyFPV",
         "4S",
         "6S",
+        "8S",
         "Freestyle",
         "5 inch",
         "5\""
@@ -9412,7 +9414,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_6_and_EasyTune.txt",
-      "hash": "bf76b0083c271129934277bb1a787651cf0b828b576abb5a06c3c7b763e0cc3e",
+      "hash": "db172490e68f995a1b807caf119025ac52adafdc674d130c45ac8d1ed85d072f",
       "title": "SupaflyFPV Freestyle 6 Inch",
       "firmware_version": [
         "4.5"
@@ -9422,6 +9424,9 @@
       "keywords": [
         "Supafly",
         "SupaflyFPV",
+        "4S",
+        "6S",
+        "8s",
         "Freestyle",
         "6 inch",
         "6\""
@@ -9431,7 +9436,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_7_Inch_EasyTune.txt",
-      "hash": "30c158d3d2f6dfb239a06b41d6c47af63043c6b4687b77e68c41324524f6986b",
+      "hash": "2aaf43efd8d0a0592c6b74f6443abc73dab057b05c0a3d7ad9e9bce2042fff82",
       "title": "SupaflyFPV Freestyle 7 Inch",
       "firmware_version": [
         "4.5"
@@ -9441,6 +9446,9 @@
       "keywords": [
         "Supafly",
         "SupaflyFPV",
+        "4S",
+        "6S",
+        "8s",
         "Freestyle",
         "7 inch",
         "7\""

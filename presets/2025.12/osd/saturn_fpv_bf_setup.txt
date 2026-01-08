@@ -273,6 +273,9 @@
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 100,40,60
 			set rpm_filter_weights = 100,40,60
 		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 90,30,60
+			set rpm_filter_weights = 90,30,60
+		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 100 (DEFAULT)
 			rpm_filter_weights = 100,100,100
 		#$ OPTION END
@@ -284,6 +287,9 @@
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 1000
 			set rpm_filter_q = 1000
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 800
+			set rpm_filter_q = 800
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 500 (DEFAULT)
 			rpm_filter_q = 500
