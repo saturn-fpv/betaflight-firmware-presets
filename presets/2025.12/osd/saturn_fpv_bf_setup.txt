@@ -24,6 +24,16 @@
 	#$ DESCRIPTION: <br>
 
 # -- Includes --
+	#$ OPTION_GROUP BEGIN: Defaults
+		#$ OPTION BEGIN (UNCHECKED): Reset Tune & Filter
+			#$ INCLUDE: presets/2025.12/tune/defaults.txt
+			#$ INCLUDE: presets/4.5/filters/defaults.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Reset EVERYTHING
+#			#$ INCLUDE: presets/2025.12/other/reset_all.txt
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
 
 # -- General Settings --
 	#$ OPTION_GROUP BEGIN: General Settings
@@ -43,6 +53,7 @@
 				set small_angle = 180
 				set fpv_mix_degrees = 25
 				set pilot_name = saturn_fpv
+				set baro_hardware = NONE
 
 			# -- Power & Battery --
 				set vbat_max_cell_voltage = 440
@@ -63,8 +74,8 @@
 				map AETR1234
 				set min_check = 1010
 				set max_check = 1990
-				set deadband = 2
-				set yaw_deadband = 2
+				set deadband = 0
+				set yaw_deadband = 0
 				set report_cell_voltage = ON
 
 			# -- Modes --
@@ -133,12 +144,34 @@
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
-
-
 # -- Options --
+
+	#$ OPTION_GROUP BEGIN: Tune
+		#$ OPTION BEGIN (UNCHECKED): Tune Basics
+			profile 0
+			set dshot_bidir = ON
+			set dyn_idle_min_rpm = 30
+			set throttle_boost = 10
+			set anti_gravity_gain = 120
+			set iterm_relax_cutoff = 20
+			set thrust_linear = 30
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Sbang Slider Tune
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): BnF Chimera
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): BnF Mob7
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): BnF Cinelog30
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
 	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Radio Link
 		#$ OPTION BEGIN (UNCHECKED): Official 50Hz HD Freestyle
 			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_hd_freestyle.txt
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 50Hz Freestyle
+			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_freestyle.txt
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 250Hz HD Freestyle
 			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_hd_freestyle.txt
@@ -187,6 +220,7 @@
 			aux 5 35 5 1800 2100 0 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Pos & Alt Hold
+			set pos_hold_without_mag = ON
 			aux 0 0 0 1800 2100 0 0
 			aux 1 1 3 1800 2100 0 0
 			aux 2 3 2 1300 1700 0 0
@@ -197,6 +231,15 @@
 			aux 7 35 5 1800 2100 0 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Chirp
+		#$ OPTION END
+	#$ OPTION_GROUP END
+			
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Motor Direction
+		#$ OPTION BEGIN (CHECKED): props out
+			set yaw_motors_reversed = ON
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): props in (ducted whoop)
+			set yaw_motors_reversed = OFF
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
@@ -393,21 +436,17 @@
 		#$ OPTION END
 	#$ OPTION_GROUP END
 	
-	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Motor Direction
-		#$ OPTION BEGIN (CHECKED): props out
-			set yaw_motors_reversed = ON
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): props in (ducted whoop)
-			set yaw_motors_reversed = OFF
-		#$ OPTION END
-	#$ OPTION_GROUP END
-	
-	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Current Meter Calibration
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Calibrations, Alignments, Motor Order
 		#$ OPTION BEGIN (UNCHECKED): Chimera 185
 			set ibata_scale = 185
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Jeno Wasp 212
 			set ibata_scale = 212
+			set acc_calibration = -14,0,47,1
+			set align_board_roll = 0
+			set align_board_pitch = 0
+			set align_board_yaw = 180
+			set motor_output_reordering = 3,2,1,0,4,5,6,7
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Jeno Halo 220
 			set ibata_scale = 220
@@ -416,7 +455,7 @@
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Pluto
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Mob7 hkv
+		#$ OPTION BEGIN (UNCHECKED): Mob7 hkv 470
 			set ibata_scale = 470
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Micro Apex
