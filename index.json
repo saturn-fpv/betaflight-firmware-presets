@@ -690,7 +690,7 @@
     },
     {
       "fullPath": "presets/2025.12/osd/saturn_fpv_bf_setup.txt",
-      "hash": "891bda6f0c00dd1032c76f4157476c3a14e5c87da07cc0791bc8bde09c2087c2",
+      "hash": "54ec280a7336e843b3806542a88f908a3b33f7c08c0a8527d213aa2817b01959",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -787,6 +787,22 @@
         "sugarK"
       ],
       "author": "sugarK",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/other/reset_all.txt",
+      "hash": "9905834cc9aa26b644dee8c9258fbffe7b5849030b34010681dabd2002b17d46",
+      "title": "Reset ALL",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "Saturn",
+        "Saturn_FPV"
+      ],
+      "author": "Saturn_FPV",
       "priority": 0
     },
     {
