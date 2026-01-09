@@ -20,152 +20,22 @@
 	#$ DESCRIPTION: <br>
 	#$ DESCRIPTION: <br>
 
+# -- To Do --
+	# add defaults for not included features like GPS
+
 # version
 # Betaflight / STM32F405 (F405) 2025.12.0-RC2 Nov  8 2025 / 10:31:08 (9c1a6bfab) MSP API: 1.47
 # config rev: c940ae8
 
 # start the command batch
-batch start
 
 # name: -
 
 # resources
-resource BEEPER 1 B04
-resource MOTOR 1 B00
-resource MOTOR 2 B01
-resource MOTOR 3 C09
-resource MOTOR 4 C08
-resource MOTOR 5 B06
-resource MOTOR 6 NONE
-resource MOTOR 7 NONE
-resource MOTOR 8 NONE
-resource SERIAL_TX 1 A09
-resource SERIAL_TX 2 A02
-resource SERIAL_TX 3 B10
-resource SERIAL_TX 4 NONE
-resource SERIAL_TX 5 NONE
-resource SERIAL_TX 6 C06
-resource SERIAL_RX 1 A10
-resource SERIAL_RX 2 A03
-resource SERIAL_RX 3 B11
-resource SERIAL_RX 4 NONE
-resource SERIAL_RX 5 NONE
-resource SERIAL_RX 6 C07
-resource INVERTER 1 NONE
-resource INVERTER 2 C13
-resource INVERTER 3 NONE
-resource INVERTER 4 NONE
-resource INVERTER 5 NONE
-resource INVERTER 6 NONE
-resource I2C_SCL 1 NONE
-resource I2C_SCL 2 NONE
-resource I2C_SCL 3 NONE
-resource I2C_SDA 1 NONE
-resource I2C_SDA 2 NONE
-resource I2C_SDA 3 NONE
-resource LED 1 B05
-resource LED 2 NONE
-resource LED 3 NONE
-resource SPI_SCK 1 A05
-resource SPI_SCK 2 B13
-resource SPI_SCK 3 C10
-resource SPI_SDI 1 A06
-resource SPI_SDI 2 B14
-resource SPI_SDI 3 C11
-resource SPI_SDO 1 A07
-resource SPI_SDO 2 B15
-resource SPI_SDO 3 C12
-resource ESCSERIAL 1 B08
-resource ADC_BATT 1 C02
-resource ADC_RSSI 1 NONE
-resource ADC_CURR 1 C01
-resource ADC_EXT 1 NONE
-resource BARO_CS 1 NONE
-resource BARO_EOC 1 NONE
-resource BARO_XCLR 1 NONE
-resource USB_MSC_PIN 1 NONE
-resource FLASH_CS 1 A15
-resource GYRO_EXTI 1 C04
-resource GYRO_CS 1 A04
-resource USB_DETECT 1 C05
 
 # timer
-timer B08 AF3
-# pin B08: TIM10 CH1 (AF3)
-timer B00 AF2
-# pin B00: TIM3 CH3 (AF2)
-timer B01 AF2
-# pin B01: TIM3 CH4 (AF2)
-timer C09 AF3
-# pin C09: TIM8 CH4 (AF3)
-timer C08 AF3
-# pin C08: TIM8 CH3 (AF3)
-timer B06 AF2
-# pin B06: TIM4 CH1 (AF2)
-timer A09 AF1
-# pin A09: TIM1 CH2 (AF1)
-timer A10 AF1
-# pin A10: TIM1 CH3 (AF1)
-timer A02 AF2
-# pin A02: TIM5 CH3 (AF2)
-timer A03 AF3
-# pin A03: TIM9 CH2 (AF3)
-timer B10 AF1
-# pin B10: TIM2 CH3 (AF1)
-timer B11 AF1
-# pin B11: TIM2 CH4 (AF1)
 
 # dma
-dma SPI_SDO 1 NONE
-dma SPI_SDO 2 NONE
-dma SPI_SDO 3 NONE
-dma SPI_SDI 1 NONE
-dma SPI_SDI 2 NONE
-dma SPI_SDI 3 NONE
-dma SPI_TX 1 NONE
-dma SPI_TX 2 NONE
-dma SPI_TX 3 NONE
-dma SPI_RX 1 NONE
-dma SPI_RX 2 NONE
-dma SPI_RX 3 NONE
-dma ADC 1 1
-# ADC 1: DMA2 Stream 4 Channel 0
-dma ADC 2 NONE
-dma ADC 3 NONE
-dma UART_TX 1 NONE
-dma UART_TX 2 NONE
-dma UART_TX 3 NONE
-dma UART_TX 4 NONE
-dma UART_TX 5 NONE
-dma UART_TX 6 NONE
-dma UART_RX 1 NONE
-dma UART_RX 2 NONE
-dma UART_RX 3 NONE
-dma UART_RX 4 NONE
-dma UART_RX 5 NONE
-dma UART_RX 6 NONE
-dma pin B08 NONE
-dma pin B00 0
-# pin B00: DMA1 Stream 7 Channel 5
-dma pin B01 0
-# pin B01: DMA1 Stream 2 Channel 5
-dma pin C09 0
-# pin C09: DMA2 Stream 7 Channel 7
-dma pin C08 0
-# pin C08: DMA2 Stream 2 Channel 0
-dma pin B06 0
-# pin B06: DMA1 Stream 0 Channel 2
-dma pin A09 0
-# pin A09: DMA2 Stream 6 Channel 0
-dma pin A10 0
-# pin A10: DMA2 Stream 6 Channel 0
-dma pin A02 0
-# pin A02: DMA1 Stream 0 Channel 6
-dma pin A03 NONE
-dma pin B10 0
-# pin B10: DMA1 Stream 1 Channel 3
-dma pin B11 0
-# pin B11: DMA1 Stream 7 Channel 3
 
 # feature
 feature -RX_PPM
@@ -197,11 +67,6 @@ feature AIRMODE
 feature ANTI_GRAVITY
 
 # serial
-serial VCP 1 115200 57600 0 115200
-serial UART1 0 115200 57600 0 115200
-serial UART2 0 115200 57600 0 115200
-serial UART3 0 115200 57600 0 115200
-serial UART6 0 115200 57600 0 115200
 
 # mixer
 mixer QUADX
