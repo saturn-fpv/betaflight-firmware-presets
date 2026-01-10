@@ -689,22 +689,6 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/2025.12/osd/saturn_fpv_bf_setup.txt",
-      "hash": "b8474b74023e1ba9817e19dcc0ff6752fdfb563cd61eee4255b7cedf6d312649",
-      "title": "Saturn_FPV Setup",
-      "firmware_version": [
-        "2025.12"
-      ],
-      "category": "OSD",
-      "status": "EXPERIMENTAL",
-      "keywords": [
-        "Saturn",
-        "Saturn_FPV"
-      ],
-      "author": "Saturn_FPV",
-      "priority": 0
-    },
-    {
       "fullPath": "presets/2025.12/osd/sugark_hdzero_osd.txt",
       "hash": "656a74f10de5a16a67ee453e84a4e87e2b4d03debb96ef45a1c52d7b6a1f26d3",
       "title": "sugarK HDzero OSD",
@@ -821,6 +805,22 @@
         "GPS_Rescue"
       ],
       "author": "Betaflight",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/other/saturn_fpv_bf_setup.txt",
+      "hash": "1e2422061f50d04bee25bf8c5ba9469cb9dba7871e9943ffd2f56a12cbd5052c",
+      "title": "Saturn_FPV Setup",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "Saturn",
+        "Saturn_FPV"
+      ],
+      "author": "Saturn_FPV",
       "priority": 0
     },
     {
