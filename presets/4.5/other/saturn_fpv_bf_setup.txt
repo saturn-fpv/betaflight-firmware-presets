@@ -43,6 +43,7 @@
 				set small_angle = 180
 				set fpv_mix_degrees = 25
 				set pilot_name = saturn_fpv
+				set baro_hardware = NONE
 
 			# -- Power & Battery --
 				set vbat_max_cell_voltage = 440
@@ -148,12 +149,20 @@
 			#$ INCLUDE: presets/4.3/rc_link/generic/50hz_hd_freestyle.txt
 			set osd_rssi_dbm_alarm = -105
 		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 50Hz Freestyle
+			#$ INCLUDE: presets/4.3/rc_link/generic/50hz_freestyle.txt
+			set osd_rssi_dbm_alarm = -105
+		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 250Hz HD Freestyle
 			#$ INCLUDE: presets/4.3/rc_link/generic/250hz_hd_freestyle.txt
 			set osd_rssi_dbm_alarm = -98
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official 250Hz Freestyle
 			#$ INCLUDE: presets/4.3/rc_link/generic/250hz_freestyle.txt
+			set osd_rssi_dbm_alarm = -98
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Official 250Hz Race
+			#$ INCLUDE: presets/4.3/rc_link/generic/250hz_race.txt
 			set osd_rssi_dbm_alarm = -98
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Official D500Hz Freestyle
@@ -183,6 +192,7 @@
 			set failsafe_procedure = GPS-RESCUE
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): no GPS
+			set failsafe_procedure = DROP
 			set osd_warn_bitmask = 50173
 			set osd_stat_bitmask = 8521380
 		#$ OPTION END
@@ -218,6 +228,9 @@
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 100,40,60
 			set rpm_filter_weights = 100,40,60
 		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 90,30,60
+			set rpm_filter_weights = 90,30,60
+		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Weights 100 (DEFAULT)
 			rpm_filter_weights = 100,100,100
 		#$ OPTION END
@@ -229,6 +242,9 @@
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 1000
 			set rpm_filter_q = 1000
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 800
+			set rpm_filter_q = 800
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): RPM Filter Q Factor 500 (DEFAULT)
 			rpm_filter_q = 500
@@ -272,42 +288,6 @@
 			set roll_expo = 50
 			set pitch_expo = 50
 			set yaw_expo = 50
-			set roll_srate = 50
-			set pitch_srate = 50
-			set yaw_srate = 50
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Actual Linear 300
-			rateprofile 0
-			set roll_rc_rate = 30
-			set pitch_rc_rate = 30
-			set yaw_rc_rate = 30
-			set roll_expo = 0
-			set pitch_expo = 0
-			set yaw_expo = 0
-			set roll_srate = 30
-			set pitch_srate = 30
-			set yaw_srate = 30
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Actual Linear 400
-			rateprofile 0
-			set roll_rc_rate = 40
-			set pitch_rc_rate = 40
-			set yaw_rc_rate = 40
-			set roll_expo = 0
-			set pitch_expo = 0
-			set yaw_expo = 0
-			set roll_srate = 40
-			set pitch_srate = 40
-			set yaw_srate = 40
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Actual Linear 500
-			rateprofile 0
-			set roll_rc_rate = 50
-			set pitch_rc_rate = 50
-			set yaw_rc_rate = 50
-			set roll_expo = 0
-			set pitch_expo = 0
-			set yaw_expo = 0
 			set roll_srate = 50
 			set pitch_srate = 50
 			set yaw_srate = 50
@@ -367,7 +347,7 @@
 			set pitch_srate = 90
 			set yaw_srate = 90
 		#$ OPTION END
-		#$ OPTION BEGIN (CHECKED): Actual 500 900 1
+		#$ OPTION BEGIN (UNCHECKED): Actual 500 900 1
 			rateprofile 2
 			set roll_rc_rate = 50
 			set pitch_rc_rate = 50
@@ -409,5 +389,78 @@
 		#$ OPTION BEGIN (UNCHECKED): Micro Apex
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Cinelog30
+		#$ OPTION END
+	#$ OPTION_GROUP END
+
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Ports
+		#$ OPTION BEGIN (UNCHECKED): Chimera
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 131073 115200 57600 0 115200
+			serial UART2 64 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART4 2 115200 115200 0 115200
+			serial UART5 0 115200 57600 0 115200
+			serial UART6 1024 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Jeno Wasp
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 1 115200 57600 0 115200
+			serial UART2 64 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART4 2 115200 115200 0 115200
+			serial UART5 0 115200 57600 0 115200
+			serial UART6 0 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Jeno Halo
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 64 115200 57600 0 115200
+			serial UART2 0 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART4 0 115200 57600 0 115200
+			serial UART5 131073 115200 57600 0 115200
+			serial UART7 0 115200 57600 0 115200
+			serial UART8 2 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Mars
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 64 115200 57600 0 115200
+			serial UART2 0 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART4 0 115200 57600 0 115200
+			serial UART5 0 115200 57600 0 115200
+			serial UART6 131073 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Pluto
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 64 115200 57600 0 115200
+			serial UART2 2 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART4 0 115200 57600 0 115200
+			serial UART5 0 115200 57600 0 115200
+			serial UART6 131073 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Mob7 hkv
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 131073 115200 57600 0 115200
+			serial UART2 64 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART6 0 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Micro Apex
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 0 115200 57600 0 115200
+			serial UART2 64 115200 57600 0 115200
+			serial UART3 131073 115200 57600 0 115200
+			serial UART4 0 115200 57600 0 115200
+			serial UART5 0 115200 57600 0 115200
+			serial UART6 0 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Cinelog30
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 131073 115200 57600 0 115200
+			serial UART2 64 115200 57600 0 115200
+			serial UART3 0 115200 57600 0 115200
+			serial UART4 0 115200 57600 0 115200
+			serial UART5 0 115200 57600 0 115200
 		#$ OPTION END
 	#$ OPTION_GROUP END
