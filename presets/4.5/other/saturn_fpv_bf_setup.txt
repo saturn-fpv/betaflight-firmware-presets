@@ -62,10 +62,10 @@
 
 			# -- Receiver --
 				map AETR1234
-				set min_check = 1010
-				set max_check = 1990
-				set deadband = 2
-				set yaw_deadband = 2
+				set min_check = 1050
+				set max_check = 1950
+				set deadband = 0
+				set yaw_deadband = 0
 				set report_cell_voltage = ON
 
 			# -- Modes --

@@ -809,7 +809,7 @@
     },
     {
       "fullPath": "presets/2025.12/other/saturn_fpv_bf_setup.txt",
-      "hash": "4b54f6ed0e8488ef19360a88c22dd40d991a9ba36a46fe01035d702ac2ea52e5",
+      "hash": "a58441c32e365fc2ea67034e1966cd218c24afcde7b0bde90279ea170b8d7ba8",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -8227,7 +8227,7 @@
     },
     {
       "fullPath": "presets/4.5/other/saturn_fpv_bf_setup.txt",
-      "hash": "917f4a50586c0f2635c94b2f43c5a6b0b9be7b945a922d16e47e2fd951b68472",
+      "hash": "57cfcf6c284324313bc4d464340b283f4e90de2bc2ea9f4eb4ba9269f4fda030",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "4.5"
@@ -9368,7 +9368,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_3_4_Inch_EasyTune.txt",
-      "hash": "3fd13f08d7c173b16c31ba206dbd516359294852b32882e412fffc57bfc96258",
+      "hash": "871ad863637b7c68f419628ae7f98da3e6db5057128ad36437c0f9b0651ebe01",
       "title": "SupaflyFPV Freestyle 3/4 Inch",
       "firmware_version": [
         "4.5"
@@ -9392,7 +9392,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_5_Inch_EasyTune.txt",
-      "hash": "107973861a552a42bed6b25e4f7af3f328c4185bc448d1e10ef78a3c059892ff",
+      "hash": "8b93f13163c8cad24e9c54b60d19c7824b05afb98dd108889e8a9d03b5c15e96",
       "title": "SupaflyFPV Freestyle 5 Inch",
       "firmware_version": [
         "4.5"
@@ -9414,7 +9414,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_6_and_EasyTune.txt",
-      "hash": "db172490e68f995a1b807caf119025ac52adafdc674d130c45ac8d1ed85d072f",
+      "hash": "a79a55c90c2305b5a85b952e1baae666cc2c26dc7367928d7ae10a4aa4dacbe7",
       "title": "SupaflyFPV Freestyle 6 Inch",
       "firmware_version": [
         "4.5"
@@ -9436,7 +9436,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_7_Inch_EasyTune.txt",
-      "hash": "2aaf43efd8d0a0592c6b74f6443abc73dab057b05c0a3d7ad9e9bce2042fff82",
+      "hash": "0202aaab4dbc3ffe40e9145ac5cf0fcd0a13cf0794e0d2b8035f0c3302f54f2c",
       "title": "SupaflyFPV Freestyle 7 Inch",
       "firmware_version": [
         "4.5"

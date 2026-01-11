@@ -72,8 +72,8 @@
 
 			# -- Receiver --
 				map AETR1234
-				set min_check = 1010
-				set max_check = 1990
+				set min_check = 1050
+				set max_check = 1950
 				set deadband = 0
 				set yaw_deadband = 0
 				set report_cell_voltage = ON
@@ -457,8 +457,12 @@
 		#$ OPTION END
 	#$ OPTION_GROUP END
 	
-	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Calibrations, Alignments, Motor Order
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Calibrations, Alignments, Motor Order, Name
 		#$ OPTION BEGIN (UNCHECKED): Chimera
+			set craft_name = Chimera
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 14
 			set ibata_scale = 185
 			set acc_calibration = -17,5,22,1
 			set align_board_roll = 0
@@ -466,7 +470,11 @@
 			set align_board_yaw = 0
 			set motor_output_reordering = 0,1,2,3,4,5,6,7
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Jeno Wasp
+		#$ OPTION BEGIN (UNCHECKED): JeNo Wasp
+			set craft_name = JeNo Wasp
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 14
 			set ibata_scale = 212
 			set acc_calibration = -14,0,47,1
 			set align_board_roll = 0
@@ -474,7 +482,11 @@
 			set align_board_yaw = 180
 			set motor_output_reordering = 3,2,1,0,4,5,6,7
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Jeno Halo
+		#$ OPTION BEGIN (UNCHECKED): JeNo Halo
+			set craft_name = JeNo Halo
+			set motor_pwm_protocol = DSHOT600
+			set pid_process_denom = 1
+			set motor_poles = 14
 			set ibata_scale = 220
 			set acc_calibration = 4,-33,-19,1
 			set align_board_roll = 0
@@ -483,6 +495,10 @@
 			set motor_output_reordering = 3,2,1,0,4,5,6,7
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Mars
+			set craft_name = Mars
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 12
 			set ibata_scale = 170
 			set acc_calibration = -157,38,-19,1
 			set align_board_roll = 180
@@ -491,6 +507,10 @@
 			set motor_output_reordering = 1,3,0,2,4,5,6,7
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Pluto
+			set craft_name = Pluto
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 12
 			set ibata_scale = 170
 			set acc_calibration = -54,-2,26,1
 			set align_board_roll = 0
@@ -498,7 +518,11 @@
 			set align_board_yaw = 180
 			set motor_output_reordering = 2,3,0,1,4,5,6,7
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Mob7 hkv
+		#$ OPTION BEGIN (UNCHECKED): Mob7 HKV
+			set craft_name = Mob7 HKV
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 12
 			set ibata_scale = 470
 			set acc_calibration = 12,15,-60,1
 			set align_board_roll = 0
@@ -507,6 +531,10 @@
 			set motor_output_reordering = 0,1,2,3,4,5,6,7
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Micro Apex
+			set craft_name = Micro Apex
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 14
 			set ibata_scale = 170
 			set acc_calibration = 21,10,-4,1
 			set align_board_roll = 0
@@ -515,6 +543,10 @@
 			set motor_output_reordering = 0,1,2,3,4,5,6,7
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Cinelog30
+			set craft_name = Cinelog30
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 14
 			set ibata_scale = 100
 			set acc_calibration = -63,-27,-15,1
 			set align_board_roll = 180
