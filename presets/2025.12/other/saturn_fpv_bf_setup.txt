@@ -578,7 +578,7 @@
 			set motor_pwm_protocol = DSHOT300
 			set pid_process_denom = 2
 			set motor_poles = 14
-			set ibata_scale = 170
+			set ibata_scale = 492
 			set acc_calibration = 62,-4,13,1
 			set align_board_roll = 180
 			set align_board_pitch = 0
