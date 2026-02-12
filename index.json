@@ -163,8 +163,10 @@
       "benlumley",
       "bensonk",
       "Betaflight",
+      "Black Bird FPV (Tune) / Saturn_FPV (Preset)",
       "BMSThomas",
       "Botgrinder",
+      "CADDXFPV",
       "Chris Rosser",
       "ctzsnooze",
       "ctzsnooze, SupaflyFPV",
@@ -213,7 +215,6 @@
     ],
     "keywords": [
       "\\\\GAS",
-      "03",
       "10\"",
       "100 euro fpv",
       "1000Hz",
@@ -316,6 +317,8 @@
       "betaflight",
       "betafpv",
       "bezerkrc",
+      "Black Bird FPV",
+      "Blackbird",
       "blackbox",
       "BMS",
       "BMSThomas",
@@ -472,13 +475,14 @@
       "navigation",
       "Neil",
       "neuron",
+      "Next Level",
       "nice",
       "nicholas young",
       "nmea",
       "no rpm",
       "noisy",
       "Normal",
-      "O3",
+      "O3 & O4",
       "O3 air unit",
       "Omni",
       "OpenRacer",
@@ -493,6 +497,7 @@
       "PIDtoolbox",
       "pro32",
       "profile",
+      "Protos",
       "Pure Race",
       "quaddiction",
       "quick",
@@ -532,7 +537,7 @@
       "Safe",
       "Saturn",
       "Saturn_FPV",
-      "sbang",
+      "SBANG",
       "sbus",
       "SBUS fast",
       "secretfader",
@@ -809,7 +814,7 @@
     },
     {
       "fullPath": "presets/2025.12/other/saturn_fpv_bf_setup.txt",
-      "hash": "7670b885f5efc2e4309a04fe01c8ac6bb176de83b8b61a5a77bbb56d7e31b78c",
+      "hash": "9c424eab289297b9db5eef611dea3c9c9867a004ea46d9670a3de32ae9a50bd3",
       "title": "Saturn_FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -1771,6 +1776,28 @@
       "author": "Ivan Efimov (Limon)",
       "force_options_review": true,
       "priority": 10000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/blackbird_nextlevel.txt",
+      "hash": "53ea94140986c7e43f7b7fb92b9d0f7d342de6c6949bb75788953a11c2242dba",
+      "title": "Black Bird FPV | Next Level",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "Black Bird FPV",
+        "Blackbird",
+        "Next Level",
+        "SBANG",
+        "6S",
+        "Freestyle",
+        "5 inch",
+        "5\""
+      ],
+      "author": "Black Bird FPV (Tune) / Saturn_FPV (Preset)",
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/2025.12/tune/defaults.txt",
@@ -7218,11 +7245,12 @@
     },
     {
       "fullPath": "presets/4.4/vtx/DJI_FPV-WTF_MSP-OSD.txt",
-      "hash": "3a32624a215bafee95f4581bea961dbdc7eac45f8c71e687c1c4ab45d0c2fbca",
-      "title": "OSD for Fpv.wtf, DJI O3, Avatar HD",
+      "hash": "d05545df4f821e10d4d0d95f22d96ca26105098464410864fcc48b7e8135e729",
+      "title": "OSD for Fpv.wtf, DJI O3 & O4, Avatar HD",
       "firmware_version": [
         "4.4",
-        "4.5"
+        "4.5",
+        "2025.12"
       ],
       "category": "VTX",
       "status": "COMMUNITY",
@@ -7230,8 +7258,7 @@
         "vtx",
         "dji",
         "O3 air unit",
-        "O3",
-        "03",
+        "O3 & O4",
         "avatar",
         "walksnail",
         "HD",
@@ -8842,6 +8869,44 @@
       "priority": 1000000000000
     },
     {
+      "fullPath": "presets/4.5/tune/blackbird_nextlevel.txt",
+      "hash": "535f82084a08b912c745e7221abce8f5f6f237527b034bcca495a20fc49328ac",
+      "title": "Black Bird FPV | Next Level",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "Black Bird FPV",
+        "Blackbird",
+        "Next Level",
+        "SBANG",
+        "6S",
+        "Freestyle",
+        "5 inch",
+        "5\""
+      ],
+      "author": "Black Bird FPV (Tune) / Saturn_FPV (Preset)",
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/4.5/tune/caddx/CADDX_Protos.txt",
+      "hash": "1d52392fcd6f0cb4dd4bcf3d4c71a95ed7ca084184041c59f123abdd8ec08435",
+      "title": "CADDX Protos – Factory Performance Tune",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "CADDX",
+        "Protos"
+      ],
+      "author": "CADDXFPV",
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.5/tune/ctzsnooze_5in_4S_race.txt",
       "hash": "a82f335825d3b887072e6d502c2ae4f2361fa8e88874f59086d2ca8289691e8c",
       "title": "4S, 3\" to 5\" race tune by ctzsznooze",
@@ -9368,7 +9433,7 @@
     },
     {
       "fullPath": "presets/4.5/tune/supafly_fpv/SupaflyFPV_Freestyle_3_4_Inch_EasyTune.txt",
-      "hash": "871ad863637b7c68f419628ae7f98da3e6db5057128ad36437c0f9b0651ebe01",
+      "hash": "7ee8fc688783b55465fa4e42051202a9c795f8a84800b5902a40e96f9890284e",
       "title": "SupaflyFPV Freestyle 3/4 Inch",
       "firmware_version": [
         "4.5"
