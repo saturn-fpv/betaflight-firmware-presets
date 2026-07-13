@@ -304,7 +304,7 @@
       "AlexFPV",
       "analog",
       "antonig",
-      "AOS",
+      "aos",
       "AOS T3",
       "Apex",
       "Audio TBS",
@@ -642,6 +642,394 @@
     ]
   },
   "presets": [
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_3.5_filters.txt",
+      "hash": "45fc7920ddd5c8bc8842eea0312662d85963f8aef71db6b2f5d0ab8d2fe3fdb8",
+      "title": "AOS 3.5 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "3.5"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_4_filters.txt",
+      "hash": "d7a706b29b7e12a8ae587cb14c752b80fdaa9ef92f16d8711f5bd685caba1df4",
+      "title": "AOS 4 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "4"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_5.5_filters.txt",
+      "hash": "ee9961967eb98e171442700cc955be85c3381256b78259c035281d72c391da34",
+      "title": "AOS 5.5 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "5.5"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_5_filters.txt",
+      "hash": "aad9700d455c4bbe8eafa165614d07b3508a01e2df5654fa47e36f833eed4a8f",
+      "title": "AOS 5 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "5"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_65mm_filters.txt",
+      "hash": "186e1d775111c0675de468ba34780e60a582685d938ba58ceec44d512a05c3fa",
+      "title": "AOS 65mm Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "65mm",
+        "tiny",
+        "whoop"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_7_filters.txt",
+      "hash": "e49e9fbc3c30d84d0ba68e14231165830ace0d342ed9d0cba3cb29b21da0d03a",
+      "title": "AOS 7 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "7"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_cine20_filters.txt",
+      "hash": "0a1f4bc8ffd55fd4fbac70a9ce9a79611dbb0afc1f5c7eef89ea9f2aa1c83415",
+      "title": "AOS Cine20 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "cine",
+        "20"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_cine25_filters.txt",
+      "hash": "21cdba1901eea5e126b63e1678f78da856700e6d1a0dd00aa40657c3f4c2028d",
+      "title": "AOS Cine25 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "cine",
+        "25"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_cine30_filters.txt",
+      "hash": "3145ab71dce2b5e065480d1bdee219cb1739be6d6fc030a6d211fd71673b25ad",
+      "title": "AOS Cine30 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "cine",
+        "30"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_cine35_filters.txt",
+      "hash": "4b1434472ef81acb562d4a6fe97c6efac2e15dc73d983bc26e7414485409f4af",
+      "title": "AOS Cine35 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "cine",
+        "35"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_cine40_filters.txt",
+      "hash": "fa0a6885266e7145e2f20816807ac0bd498d2981f949f3aaa12fe13f8f75b20d",
+      "title": "AOS Cine40 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "cine",
+        "40"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_cine80_filters.txt",
+      "hash": "5b0fe45e0c660552efcdaae31a89c2f4fd04fadcf0042ddd128672c97a5eb002",
+      "title": "AOS Cine80 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "cine80"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_hs5_filters.txt",
+      "hash": "4ce10da6773803eacd89d6eb965aa8ff97e0c8f160e145af217119547cf3248a",
+      "title": "AOS HS5 200mph Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "HS5"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_lr5_filters.txt",
+      "hash": "ae98a49e3af2af61bcdd318b28cd0fd2a9257ee634e458334ec9172e77abd677",
+      "title": "AOS LR5 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "lr5"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_t3_filters.txt",
+      "hash": "7f220443ccf7d9f940ff8f19e4bdbbbf8b0a5eb9688db6296274eadf25088b77",
+      "title": "AOS T3 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "T3",
+        "3"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_ul10_filters.txt",
+      "hash": "a71b5a733e6a240588ff0777dc52382b3b6002f435639abce1aa9a60352156e0",
+      "title": "AOS UL10 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "ul10"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_ul5_filters.txt",
+      "hash": "4e4d1d60b437de7b0f2dd1df3f4a6955235bfe723e7609855d8550af28b920fc",
+      "title": "AOS UL5 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "ul5"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_ul7_filters.txt",
+      "hash": "fa84dc2d8d682671a4186c90c69e0c3409b815b0f8ac2f836cd5a78efc01b67f",
+      "title": "AOS UL7 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "ul7"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
+    {
+      "fullPath": "presets/2025.12/filters/aos_rc/aos_ul8_filters.txt",
+      "hash": "a8776290a7d8647241acb17932f8a14ebc6a3c1c1be6d4414c78e41821c2c157",
+      "title": "AOS UL8 Filters",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filter",
+        "filters",
+        "aos",
+        "chris",
+        "rosser",
+        "ul8"
+      ],
+      "author": "Chris Rosser",
+      "priority": 100
+    },
     {
       "fullPath": "presets/2025.12/osd/defaults.txt",
       "hash": "82aecb211c6ed2fc0d6bcbefd59c2535b324c34f73c1c2649cdb821adaf2b63f",
@@ -1801,6 +2189,438 @@
       "author": "Ivan Efimov (Limon)",
       "force_options_review": true,
       "priority": 10000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_3.5_tune.txt",
+      "hash": "07b06b140fed022fa69c6c2438cf37677e5c43fbd1f960fb4f55bec1dfa5661b",
+      "title": "AOS 3.5 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "3.5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_4_tune.txt",
+      "hash": "15fe9a9eebf1e8cde97ba6d655ab62f6b97cbc32e9c50b0ec489689274761a39",
+      "title": "AOS 4 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "4"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_5.5_tune.txt",
+      "hash": "e0001541969ffae13e45bdee795040c76d0949e204b3c88fd13e49cf359024eb",
+      "title": "AOS 5.5 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "5.5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_5_tune.txt",
+      "hash": "a41c9459999c16077d92101b94f071141512c2b385dd26dd3dd5a2a5b28d878b",
+      "title": "AOS 5 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_65mm_tune.txt",
+      "hash": "00e19a3561d3b25070b41fd77aa789937ef7e2261d4bc094f496f992e1fdfc0b",
+      "title": "65mm Tiny whoop tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "65mm",
+        "tiny",
+        "whoop"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_7_tune.txt",
+      "hash": "552b0fbd493e9e4d5c91840916f510c6f99076455ae81e8b0b7216f6c3d2d7b5",
+      "title": "AOS 7 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "7"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_cine20_tune.txt",
+      "hash": "267cea6fed7bfa92c3eda9c34f2ef0ee13a184543358fd4de13e882cf56fa06b",
+      "title": "AOS Cine20 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "cine",
+        "20"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_cine25_tune.txt",
+      "hash": "fba6845ae1a97d1a49a3d005a888516b67f3a78caf2629264b0771ed46db102d",
+      "title": "AOS Cine25 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "cine",
+        "25"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_cine30_tune.txt",
+      "hash": "c89d6131e48c97504ea98cb54c0459179187eac981541a80de96341c21fe7d8f",
+      "title": "AOS Cine30 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "cine",
+        "30"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_cine35_tune.txt",
+      "hash": "c620fe3712a021a47ff52e5a4dc2486caccb0fe753226e7a47e5420a59ee43b3",
+      "title": "AOS Cine35 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "cine35"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_cine40_tune.txt",
+      "hash": "67b516adc7ad4b30354f073468ac647f78951e368c17059f569b546724a709ab",
+      "title": "AOS Cine40 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "cine",
+        "40"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_cine80_tune.txt",
+      "hash": "0b9ba45b724df33494b3fa120e1786a6d7585a5221cb77f2002d466171c0f5b1",
+      "title": "AOS Cine80 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "cine80"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_hdzero_aio5_65mm.txt",
+      "hash": "c64f8282d5ca04ed20af8d1665a979afff7f2bea5aabf6e1018178b316678143",
+      "title": "HDZERO AIO5 65mm Whoop tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "65mm",
+        "tiny",
+        "whoop",
+        "hdzero",
+        "aio",
+        "aio5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_hs5_tune.txt",
+      "hash": "ec3b828a15c4fb86661e04be7119b62b8f597cae63ec7cc2b0c2a960eb819dc6",
+      "title": "AOS HS5 200mph tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "HS5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_lr5_tune.txt",
+      "hash": "b6b987620086f6e65e7699401367b66f001933c09c54b7f452d07355542e3af2",
+      "title": "AOS LR5 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "lr5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_t3_tune.txt",
+      "hash": "23b30b890c22a48eed284704f32e7b9b29b904f7aabe67f1bcbbcc51d15e44c3",
+      "title": "AOS T3 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "T3",
+        "3"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_ul10_tune.txt",
+      "hash": "fdb5f712befcfdc82326a6f36880927200b9fbcc96355793514ffb887af3a5c5",
+      "title": "AOS UL10 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "ul10"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_ul5_tune.txt",
+      "hash": "a9f6390347789bab0133ef5317e40d598c3ccdee152337cef5645289a6786a8c",
+      "title": "AOS UL5 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "ul5"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_ul7_tune.txt",
+      "hash": "e6d2955e2b50583e904d5b4d65076a28c05ffc98135742bcdcd66ff826cd2d39",
+      "title": "AOS UL7 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "ul7"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/aos_rc/aos_ul8_tune.txt",
+      "hash": "113f7f0af63bde93a6529a7e48af3fc790d9fd93a8ce7a3dc89dcaaa872af84c",
+      "title": "AOS UL8 tune by Chris Rosser",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "aos",
+        "chris",
+        "rosser",
+        "pid",
+        "tune",
+        "ul8"
+      ],
+      "author": "Chris Rosser",
+      "force_options_review": true,
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/2025.12/tune/blackbird_nextlevel.txt",
