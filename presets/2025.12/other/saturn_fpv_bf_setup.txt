@@ -1,15 +1,15 @@
 # -- Header --
-	#$ TITLE: Saturn_FPV Setup
+	#$ TITLE: Saturn FPV Setup
 	#$ FIRMWARE_VERSION: 2025.12
 	#$ CATEGORY: OTHER
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Saturn, Saturn_FPV
-	#$ AUTHOR: Saturn_FPV
+	#$ AUTHOR: Saturn FPV
 	#$ PARSER: MARKED
 	#$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/nn
 
 # -- To Do --
-	# Mode und feature für Chirp
+	# Adjustments for 2026.6 = remove pos hold without mag, higher thrust linear, chimera battery profiles
 
 # -- Description --
 	#$ DESCRIPTION: Description:
@@ -19,7 +19,7 @@
 	#$ DESCRIPTION: 
 	#$ DESCRIPTION: Option Explanation
 	#$ DESCRIPTION: -----------
-	#$ DESCRIPTION: - **Bla:** Blub
+	#$ DESCRIPTION: Date: 2026-07-12
 	#$ DESCRIPTION: <br>
 	#$ DESCRIPTION: <br>
 
@@ -227,6 +227,26 @@
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): BnF Cinelog30
 		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Chirp Values (default)
+			chirp_lag_freq_hz = 3
+			chirp_lead_freq_hz = 30
+			chirp_amplitude_roll = 230
+			chirp_amplitude_pitch = 230
+			chirp_amplitude_yaw = 180
+			chirp_frequency_start_deci_hz = 2
+			chirp_frequency_end_deci_hz = 6000
+			chirp_time_seconds = 20
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Chirp Values (custom)
+			chirp_lag_freq_hz = 3
+			chirp_lead_freq_hz = 30
+			chirp_amplitude_roll = 230
+			chirp_amplitude_pitch = 230
+			chirp_amplitude_yaw = 180
+			chirp_frequency_start_deci_hz = 10 #start frequency in units of 0.1 hz
+			chirp_frequency_end_deci_hz = 1000 #end frequency in units of 0.1 hz
+			chirp_time_seconds = 10 #excitation time
+		#$ OPTION END
 	#$ OPTION_GROUP END
 
 	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Radio Link
@@ -269,42 +289,30 @@
 			set failsafe_procedure = GPS-RESCUE
 			set osd_warn_bitmask = 163325
 			set osd_stat_bitmask = 8785596
+			set pos_hold_without_mag = ON #deprecated in 2026.6
+			aux 0 0 0 1800 2100 0 0
+			aux 1 1 3 1800 2100 0 0
+			aux 2 3 2 1300 1700 0 0
+			aux 3 55 7 1800 2100 0 0
+			aux 4 27 2 1800 2100 0 0
+			aux 5 11 2 1300 1700 0 0
+			aux 6 13 2 1300 2100 0 0
+			aux 7 28 4 900 1200 0 0
+			aux 8 35 5 1800 2100 0 0
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): no GPS
 			set failsafe_procedure = DROP
 			set osd_warn_bitmask = 160253
 			set osd_stat_bitmask = 8521380
-		#$ OPTION END
-	#$ OPTION_GROUP END
-
-	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Modes
-		#$ OPTION BEGIN (UNCHECKED): Standard
 			aux 0 0 0 1800 2100 0 0
 			aux 1 1 3 1800 2100 0 0
-			aux 2 27 2 1800 2100 0 0
-			aux 3 13 2 1300 2100 0 0
-			aux 4 28 4 900 1200 0 0
-			aux 5 35 5 1800 2100 0 0
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Pos & Alt Hold
-			set pos_hold_without_mag = ON
-			aux 0 0 0 1800 2100 0 0
-			aux 1 1 3 1800 2100 0 0
-			aux 2 3 2 1300 1700 0 0
+			aux 2 55 7 1800 2100 0 0
 			aux 3 27 2 1800 2100 0 0
-			aux 4 11 2 1300 1700 0 0
-			aux 5 13 2 1300 2100 0 0
-			aux 6 28 4 900 1200 0 0
-			aux 7 35 5 1800 2100 0 0
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Chirp
-			aux 0 0 0 1800 2100 0 0
-			aux 1 1 3 1800 2100 0 0
-			aux 2 55 2 1300 1700 0 0
-			aux 3 27 2 1800 2100 0 0
-			aux 4 13 2 1800 2100 0 0
+			aux 4 13 2 1300 2100 0 0
 			aux 5 28 4 900 1200 0 0
 			aux 6 35 5 1800 2100 0 0
+			aux 7 0 0 900 900 0 0
+			aux 8 0 0 900 900 0 0
 		#$ OPTION END
 	#$ OPTION_GROUP END
 			
@@ -445,15 +453,15 @@
 		#$ OPTION BEGIN (UNCHECKED): Actual 200 700 0.3
 			rateprofile 1
 			set rates_type = ACTUAL
-			set roll_rc_rate = 17
-			set pitch_rc_rate = 17
-			set yaw_rc_rate = 17
-			set roll_expo = 20
-			set pitch_expo = 20
-			set yaw_expo = 20
-			set roll_srate = 80
-			set pitch_srate = 80
-			set yaw_srate = 80
+			set roll_rc_rate = 20
+			set pitch_rc_rate = 20
+			set yaw_rc_rate = 20
+			set roll_expo = 30
+			set pitch_expo = 30
+			set yaw_expo = 30
+			set roll_srate = 70
+			set pitch_srate = 70
+			set yaw_srate = 70
 			set thr_mid = 50
 			set thr_expo = 0
 			set throttle_limit_type = OFF
@@ -479,15 +487,15 @@
 			set throttle_limit_type = OFF
 			set throttle_limit_percent = 100
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Actual 400 900 0
+		#$ OPTION BEGIN (UNCHECKED): Actual 400 900 0.5
 			rateprofile 2
 			set rates_type = ACTUAL
 			set roll_rc_rate = 40
 			set pitch_rc_rate = 40
 			set yaw_rc_rate = 40
-			set roll_expo = 0
-			set pitch_expo = 0
-			set yaw_expo = 0
+			set roll_expo = 50
+			set pitch_expo = 50
+			set yaw_expo = 50
 			set roll_srate = 90
 			set pitch_srate = 90
 			set yaw_srate = 90
@@ -535,8 +543,8 @@
 			set align_board_yaw = 180
 			set motor_output_reordering = 3,2,1,0,4,5,6,7
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Mars
-			set craft_name = Mars
+		#$ OPTION BEGIN (UNCHECKED): Mars 2
+			set craft_name = Mars 2
 			set motor_pwm_protocol = DSHOT300
 			set pid_process_denom = 2
 			set motor_poles = 12
@@ -547,17 +555,29 @@
 			set align_board_yaw = 270
 			set motor_output_reordering = 1,3,0,2,4,5,6,7
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Pluto
-			set craft_name = Pluto
+		#$ OPTION BEGIN (UNCHECKED): Mars 3
+			set craft_name = Mars 3
 			set motor_pwm_protocol = DSHOT300
 			set pid_process_denom = 2
 			set motor_poles = 12
 			set ibata_scale = 233
-			set acc_calibration = -54,-2,26,1
+			set acc_calibration = -114,-100,-54,1
+			set align_board_roll = 180
+			set align_board_pitch = 0
+			set align_board_yaw = 270
+			set motor_output_reordering = 1,3,0,2,4,5,6,7
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Mars 4
+			set craft_name = Mars 4
+			set motor_pwm_protocol = DSHOT300
+			set pid_process_denom = 2
+			set motor_poles = 14
+			set ibata_scale = 450
+			set acc_calibration = -40,17,10,1
 			set align_board_roll = 0
 			set align_board_pitch = 0
-			set align_board_yaw = 180
-			set motor_output_reordering = 2,3,0,1,4,5,6,7
+			set align_board_yaw = -45
+			set motor_output_reordering = 0,1,2,3,4,5,6,7
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Mob7 HKV
 			set craft_name = Mob7 HKV
@@ -578,7 +598,7 @@
 			set motor_pwm_protocol = DSHOT300
 			set pid_process_denom = 2
 			set motor_poles = 14
-			set ibata_scale = 500
+			set ibata_scale = 554
 			set acc_calibration = 62,-4,13,1
 			set align_board_roll = 180
 			set align_board_pitch = 0
@@ -590,7 +610,7 @@
 			set motor_pwm_protocol = DSHOT300
 			set pid_process_denom = 2
 			set motor_poles = 14
-			set ibata_scale = 100
+			set ibata_scale = 217
 			set acc_calibration = -63,-27,-15,1
 			set align_board_roll = 180
 			set align_board_pitch = 0
@@ -628,7 +648,7 @@
 			serial UART7 0 115200 57600 0 115200
 			serial UART8 2 115200 57600 0 115200
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Mars
+		#$ OPTION BEGIN (UNCHECKED): Mars 2
 			serial VCP 1 115200 57600 0 115200
 			serial UART1 64 115200 57600 0 115200
 			serial UART2 0 115200 57600 0 115200
@@ -637,14 +657,21 @@
 			serial UART5 0 115200 57600 0 115200
 			serial UART6 131073 115200 57600 0 115200
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Pluto
+		#$ OPTION BEGIN (UNCHECKED): Mars 3
 			serial VCP 1 115200 57600 0 115200
 			serial UART1 64 115200 57600 0 115200
-			serial UART2 2 115200 57600 0 115200
+			serial UART2 2 115200 115200 0 115200
 			serial UART3 0 115200 57600 0 115200
 			serial UART4 0 115200 57600 0 115200
 			serial UART5 0 115200 57600 0 115200
 			serial UART6 131073 115200 57600 0 115200
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): Mars 4
+			serial VCP 1 115200 57600 0 115200
+			serial UART1 0 115200 57600 0 115200
+			serial UART2 64 115200 57600 0 115200
+			serial UART3 2 115200 57600 0 115200
+			serial UART5 131073 115200 57600 0 115200
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Mob7 hkv
 			serial VCP 1 115200 57600 0 115200
