@@ -228,24 +228,24 @@
 		#$ OPTION BEGIN (UNCHECKED): BnF Cinelog30
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Chirp Values (default)
-			chirp_lag_freq_hz = 3
-			chirp_lead_freq_hz = 30
-			chirp_amplitude_roll = 230
-			chirp_amplitude_pitch = 230
-			chirp_amplitude_yaw = 180
-			chirp_frequency_start_deci_hz = 2
-			chirp_frequency_end_deci_hz = 6000
-			chirp_time_seconds = 20
+			set chirp_lag_freq_hz = 3
+			set chirp_lead_freq_hz = 30
+			set chirp_amplitude_roll = 230
+			set chirp_amplitude_pitch = 230
+			set chirp_amplitude_yaw = 180
+			set chirp_frequency_start_deci_hz = 2
+			set chirp_frequency_end_deci_hz = 6000
+			set chirp_time_seconds = 20
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Chirp Values (custom)
-			chirp_lag_freq_hz = 3
-			chirp_lead_freq_hz = 30
-			chirp_amplitude_roll = 230
-			chirp_amplitude_pitch = 230
-			chirp_amplitude_yaw = 180
-			chirp_frequency_start_deci_hz = 10 #start frequency in units of 0.1 hz
-			chirp_frequency_end_deci_hz = 1000 #end frequency in units of 0.1 hz
-			chirp_time_seconds = 10 #excitation time
+			set chirp_lag_freq_hz = 3
+			set chirp_lead_freq_hz = 30
+			set chirp_amplitude_roll = 230
+			set chirp_amplitude_pitch = 230
+			set chirp_amplitude_yaw = 180
+			set chirp_frequency_start_deci_hz = 10 #start frequency in units of 0.1 hz
+			set chirp_frequency_end_deci_hz = 1000 #end frequency in units of 0.1 hz
+			set chirp_time_seconds = 10 #excitation time
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
