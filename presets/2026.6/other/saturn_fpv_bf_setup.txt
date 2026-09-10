@@ -1,6 +1,6 @@
 # -- Header --
 	#$ TITLE: Saturn FPV Setup
-	#$ FIRMWARE_VERSION: 2025.12
+	#$ FIRMWARE_VERSION: 2026.6
 	#$ CATEGORY: OTHER
 	#$ STATUS: EXPERIMENTAL
 	#$ KEYWORDS: Saturn, Saturn_FPV
@@ -9,7 +9,7 @@
 	#$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/nn
 
 # -- To Do --
-	# Adjustments for 2026.6 = remove pos hold without mag, higher thrust linear, chimera battery profiles
+	# Adjustments for 2026.6 = remove pos hold without mag, higher thrust linear, chimera battery profiles, gps defaults prüfen
 
 # -- Description --
 	#$ DESCRIPTION: Description:
@@ -26,11 +26,8 @@
 # -- Includes --
 	#$ OPTION_GROUP BEGIN: Defaults
 		#$ OPTION BEGIN (UNCHECKED): Reset Tune & Filter
-			#$ INCLUDE: presets/2025.12/tune/defaults.txt
-			#$ INCLUDE: presets/4.5/filters/defaults.txt
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Reset EVERYTHING
-#			#$ INCLUDE: presets/2025.12/other/reset_all.txt
+			#$ INCLUDE: presets/2026.6/tune/defaults.txt
+			#$ INCLUDE: presets/2026.6/filters/defaults.txt
 		#$ OPTION END
 	#$ OPTION_GROUP END
 
@@ -56,6 +53,7 @@
 
 			# -- Power & Battery --
 				set vbat_max_cell_voltage = 440
+				set vbat_warning_cell_voltage = 350
 				set vbat_min_cell_voltage = 340
 
 			# -- Failsafe --
@@ -80,8 +78,9 @@
 			# -- Modes --
 
 			# -- Adjustments --
-				adjrange 0 0 1 900 2100 12 1 0 0
-				adjrange 1 0 6 900 2100 29 6 0 0
+				adjrange 0 0 1 900 2100 12 1 0 0 # rate profiles AUX2
+				adjrange 1 0 6 900 2100 29 6 0 0 # osd profiles AUX7
+				adjrange 2 0 6 900 2100 33 6 0 0 # battery profiles AUX7
 
 			# -- Motors --
 
@@ -233,9 +232,9 @@
 			set chirp_amplitude_roll = 230
 			set chirp_amplitude_pitch = 230
 			set chirp_amplitude_yaw = 180
-			set chirp_frequency_start_deci_hz = 2
-			set chirp_frequency_end_deci_hz = 6000
-			set chirp_time_seconds = 20
+			set chirp_frequency_start_deci_hz = 2 #start frequency in units of 0.1 hz
+			set chirp_frequency_end_deci_hz = 6000 #end frequency in units of 0.1 hz
+			set chirp_time_seconds = 20 #excitation time
 		#$ OPTION END
 		#$ OPTION BEGIN (UNCHECKED): Chirp Values (custom)
 			set chirp_lag_freq_hz = 3
@@ -250,27 +249,19 @@
 	#$ OPTION_GROUP END
 
 	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Radio Link
-		#$ OPTION BEGIN (UNCHECKED): Official 50Hz HD Freestyle
-			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_hd_freestyle.txt
+		#$ OPTION BEGIN (UNCHECKED): Official Auto Packet Race
+			#$ INCLUDE: presets/2026.6/rc_link/defaults.txt
+            #$ INCLUDE: presets/2026.6/rc_link/generic/auto_race.txt
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 50Hz Freestyle
-			#$ INCLUDE: presets/2025.12/rc_link/generic/50hz_freestyle.txt
+		#$ OPTION BEGIN (UNCHECKED): Official Auto Packet Freestyle
+			#$ INCLUDE: presets/2026.6/rc_link/defaults.txt
+            #$ INCLUDE: presets/2026.6/rc_link/generic/auto_freestyle.txt
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 250Hz HD Freestyle
-			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_hd_freestyle.txt
+		#$ OPTION BEGIN (UNCHECKED): Official Auto Packet HD Freestyle
+			#$ INCLUDE: presets/2026.6/rc_link/defaults.txt
+            #$ INCLUDE: presets/2026.6/rc_link/generic/auto_hd_freestyle.txt
 		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 250Hz Freestyle
-			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_freestyle.txt
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official 250Hz Race
-			#$ INCLUDE: presets/2025.12/rc_link/generic/250hz_race.txt
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official D500Hz Freestyle
-			#$ INCLUDE: presets/2025.12/rc_link/generic/500hz_freestyle.txt
-		#$ OPTION END
-		#$ OPTION BEGIN (UNCHECKED): Official D500Hz Race
-			#$ INCLUDE: presets/2025.12/rc_link/generic/500hz_race.txt
-		#$ OPTION END
+	
 	#$ OPTION_GROUP END
 
 	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) GPS
@@ -282,14 +273,14 @@
 			set gps_rescue_alt_mode = CURRENT_ALT
 			set gps_rescue_initial_climb = 100
 			set gps_rescue_ground_speed = 2000
-			set gps_rescue_max_angle = 35
+			set ap_max_angle = 35
 			set gps_rescue_min_sats = 6
 			set gps_rescue_allow_arming_without_fix = ON
 			set ap_hover_throttle = 1250
 			set failsafe_procedure = GPS-RESCUE
 			set osd_warn_bitmask = 163325
 			set osd_stat_bitmask = 8785596
-			set pos_hold_without_mag = ON #deprecated in 2026.6
+#			set pos_hold_without_mag = ON #deprecated in 2026.6
 			aux 0 0 0 1800 2100 0 0
 			aux 1 1 3 1800 2100 0 0
 			aux 2 3 2 1300 1700 0 0
@@ -696,5 +687,63 @@
 			serial UART3 0 115200 57600 0 115200
 			serial UART4 0 115200 57600 0 115200
 			serial UART5 0 115200 57600 0 115200
+		#$ OPTION END
+	#$ OPTION_GROUP END
+	
+	#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Battery Profiles
+		#$ OPTION BEGIN (UNCHECKED): 2S
+			battery_profile 0
+			set battery_profile_name = 2S_LIHV
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 350
+			set vbat_min_cell_voltage = 340
+			set bat_capacity = 550
+			battery_profile 1
+			set battery_profile_name = 2S_LIION
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 300
+			set vbat_min_cell_voltage = 260
+			set bat_capacity = 3000
+			battery_profile 2
+			set battery_profile_name = 2S_LIION
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 300
+			set vbat_min_cell_voltage = 260
+			set bat_capacity = 5000
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): 4S
+			battery_profile 0
+			set battery_profile_name = 4S_LIHV
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 350
+			set vbat_min_cell_voltage = 340
+			set bat_capacity = 850
+		#$ OPTION END
+		#$ OPTION BEGIN (UNCHECKED): 6S
+			battery_profile 0
+			set battery_profile_name = 6S_LIHV
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 350
+			set vbat_min_cell_voltage = 340
+			set bat_capacity = 1500
+			battery_profile 1
+			set battery_profile_name = 6S_LIHV
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 350
+			set vbat_min_cell_voltage = 340
+			set bat_capacity = 7000
+			battery_profile 2
+			set battery_profile_name = 6S_LIION
+			set vbat_max_cell_voltage = 440
+			set vbat_full_cell_voltage = 410
+			set vbat_warning_cell_voltage = 300
+			set vbat_min_cell_voltage = 260
+			set bat_capacity = 9000
 		#$ OPTION END
 	#$ OPTION_GROUP END
