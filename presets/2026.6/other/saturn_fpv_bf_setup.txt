@@ -85,6 +85,7 @@
 			# -- Motors --
 
 			# -- OSD --
+				set osd_units = METRIC
 				# Alarms & Timers
 					set osd_link_quality_alarm = 60
 					set osd_cap_alarm = 9999
@@ -187,12 +188,6 @@
 				set throttle_boost = 10
 				set dyn_idle_min_rpm = 20
 				set thrust_linear = 30
-				
-				set tpa_mode = PD
-				set tpa_rate = 50
-				set tpa_breakpoint = 1300
-				set tpa_low_breakpoint = 1100
-				set tpa_low_always = ON
 				
 			# -- Filter --
 				set simplified_gyro_filter_multiplier = 150
