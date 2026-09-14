@@ -1216,22 +1216,6 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/2025.12/other/reset_all.txt",
-      "hash": "9078c0de1f490082a92ded157e5d7b069db34ec30731aa8dd9df69b77e4f08a1",
-      "title": "Reset ALL",
-      "firmware_version": [
-        "2025.12"
-      ],
-      "category": "OTHER",
-      "status": "EXPERIMENTAL",
-      "keywords": [
-        "Saturn",
-        "Saturn_FPV"
-      ],
-      "author": "Saturn_FPV",
-      "priority": 0
-    },
-    {
       "fullPath": "presets/2025.12/other/reset_gps.txt",
       "hash": "b2e065b7bbf6eef24d377a596428f2978800214de8c3a5606737c725d559e527",
       "title": "Reset GPS to 2025.12 default settings",
@@ -1251,7 +1235,7 @@
     },
     {
       "fullPath": "presets/2025.12/other/saturn_fpv_bf_setup.txt",
-      "hash": "3eec289bbd2aeec52ee05b367ea1e08c82c3c83928c7fe7f32546fc10711e1a5",
+      "hash": "e5cc28d6f75119ac95aaded6ccdf9c60e1a2747bbbceae094d078de712652a5b",
       "title": "Saturn FPV Setup",
       "firmware_version": [
         "2025.12"
@@ -3318,7 +3302,7 @@
     },
     {
       "fullPath": "presets/2026.6/other/saturn_fpv_bf_setup.txt",
-      "hash": "5105eebbd6363c2a21c40cf645f114a03b8690abd2984e96f8571eac6bbcff7e",
+      "hash": "eedad675203976023724d47d43431b682060d3441504cb30c0be3ddf68e6c945",
       "title": "Saturn FPV Setup",
       "firmware_version": [
         "2026.6"
